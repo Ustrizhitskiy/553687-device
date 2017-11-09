@@ -7,13 +7,16 @@
   <body>
     <header class="main-header">
       <span class="footer-logo-top">DEVICE</span>
-      <p class="search"> <!--Здесь будет форма -->Поиск по сайту</p>
       <nav class="main-navigation">
         <ul class="tophead">
           <li>
-            <ul class="user-navigation">
-              <li class="login-link-top">Войти</li>
-            </ul>
+            <span class="search"> <!--Здесь будет форма -->Поиск по сайту</span>
+          </li>
+          <li>
+            <a href="#">
+              <span class="login-link-top">Войти</span>
+            </a>
+          </li>
           </li>
           <li>
             <a href="#">
@@ -28,8 +31,28 @@
         </ul>
         <ul class="site-navigation">
           <li>
-            <a href="catalog.html">
+            <a href="#">
               <span class="catalog-nav">Каталог товаров</span>
+                <ul class="catalog-nav-choose">
+                  <li>
+                    <a href="virtual_real.html">Виртуальная реальность</a>
+                  </li>
+                  <li class="catalog-nav-choose-center">
+                    <a href="fitness_braceletes.html">Фитнес-браслеты</a>
+                  </li>
+                  <li class="catalog-nav-choose-right">
+                    <a href="quadrocopters.html">Квадрокоптеры</a>
+                  </li>
+                </ul>
+                <ul class="catalog-nav-choose">
+                  <li>
+                    <a href="monopods.html">Моноподы для селфи</a>
+                  </li>
+                  <li class="catalog-nav-choose-center">
+                    <a href="clever_watch.html">Умные часы</a>
+                  </li>
+                </ul>
+                <p class="catalog-nav-choose">Экшн-камеры</p>
             </a>
           </li>
           <li>
@@ -38,7 +61,7 @@
             </a>
           </li>
           <li> 
-            <a href="garanty.html">
+            <a href="warranty.html">
               <span class="cart-nav">Гарантия</span>
             </a>
           </li>
@@ -48,25 +71,28 @@
             </a>
           </li>
         </ul>
+        <img src="img/short_white_line.png" alt="Короткая белая полоска">
       </nav>
     </header>
 
     <main class="main-conteiner">
       <h1 class="visually-hidden">Реклама большого монопода</h1>
-      <section class="big-monopod-photo">
-        <img src="/img/big monopod photo" alt="Фото большого монопода">
+
+      <!-- SLIDE-1 -->
+      <section class="big-advirt-photo">
+        <img src="img/big_monopod.png" width="384" height="486" alt="Фото большого монопода">
       </section>
-      
       <aside class="ben-stiller">
-        <img src="/img/short white line.jpg">
         <span class="01">01</span>
         <p class="font-ben-stiller">Делай селфи,<br>как Бен Стиллер!</p>
         <p class="font-for-annotation">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
         <p class="podrobnee">
           <a href="monopods.html">
             <span class="yellow-line">ПОДРОБНЕЕ</span>
-            <img class="little-circles-image" src="circles.jpg">
           </a>
+          <img class="slider-buttons" src="img/slider_button.png" width="12" height="12" alt="Заполненный кружочек слайдера">
+          <img class="slider-buttons" src="img/slider_button_empty.png" width="12" height="12" alt="Пустой кружочек слайдера">
+          <img class="slider-buttons" src="img/slider_button_empty.png" width="12" height="12" alt="Пустой кружочек слайдера">
         </p>
         <table class="ben-stiller-table">
           <tr>
@@ -81,6 +107,68 @@
           </tr>
         </table>
       </aside>
+
+
+      <!-- SLIDE-2 -->
+      <section class="big-advirt-photo">
+        <img src="img/big_clever-watch.png" width="345" height="485" alt="Фото умных часов">
+      </section>
+      <aside class="ben-stiller">
+        <span class="01">02</span>
+        <p class="font-ben-stiller">Худеем<br>правильно!</p>
+        <p class="font-for-annotation">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
+        <p class="podrobnee">
+          <a href="clever-watch.html">
+            <span class="yellow-line">ПОДРОБНЕЕ</span>
+          </a>
+          <img class="slider-buttons" src="img/slider_button_empty.png" width="12" height="12" alt="Пустой кружочек слайдера">
+          <img class="slider-buttons" src="img/slider_button.png" width="12" height="12" alt="Заполненный кружочек слайдера">
+          <img class="slider-buttons" src="img/slider_button_empty.png" width="12" height="12" alt="Пустой кружочек слайдера">
+        </p>
+        <table class="ben-stiller-table">
+          <tr>
+            <td>48 часов</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Без подзарядки</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </aside>
+
+
+      <!-- SLIDE-3 -->
+      <section class="big-advirt-photo">
+        <img src="img/big_quadrocopter.png" width="526" height="334" alt="Фото квадрокоптера">
+      </section>
+      <aside class="ben-stiller">
+        <span class="01">03</span>
+        <p class="font-ben-stiller">Порхает как бабочка<br>жалит, как пчела!</p>
+        <p class="font-for-annotation">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замоскированным под стандартную камеру</p>
+        <p class="podrobnee">
+          <a href="quadrocopters.html">
+            <span class="yellow-line">ПОДРОБНЕЕ</span>
+          </a>
+          <img class="slider-buttons" src="img/slider_button_empty.png" width="12" height="12" alt="Пустой кружочек слайдера">
+          <img class="slider-buttons" src="img/slider_button_empty.png" width="12" height="12" alt="Пустой кружочек слайдера">
+          <img class="slider-buttons" src="img/slider_button.png" width="12" height="12" alt="Заполненный кружочек слайдера">
+          </p>
+        <table class="ben-stiller-table">
+          <tr>
+            <td>800 м</td>
+            <td>50 м</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Дальность полета</td>
+            <td>Радиус поражения</td>
+            <td></td>
+          </tr>
+        </table>
+      </aside>
         
         <h2 class="visually-hidden">Категории товаров</h2>
         
@@ -88,11 +176,7 @@
           <li>
             <p>
               <a href="virtual_real.html">
-                <img src="/img/виртуальная реальность.jpg" alt="Виртуальная реальность">
-              </a>
-            </p>
-            <p>
-              <a href="virtual_real.html">
+                <img src="img/virtual_real.png" width="97" height="55" alt="Виртуальная реальность">
                 <span class="categories-name-sign">Виртуальная реальность</span>
               </a>
             </p>
@@ -100,11 +184,7 @@
           <li>
             <p>
               <a href="monopods.html">
-                <img src="/img/Моноподы для селфи.jpg" alt="Моноподы для селфи">
-              </a>
-            </p>
-            <p>
-              <a href="monopods.html">
+                <img src="img/selfy_monopods.png" width="86" height="117" alt="Моноподы для селфи">
                 <span class="categories-name-sign">Моноподы для селфи</span>
               </a>
             </p>
@@ -112,11 +192,7 @@
           <li>
             <p>
               <a href="action_cameras.html">
-                <img src="/img/Экшен-камеры.jpg" alt="Экшен-камеры">
-              </a>
-            </p>
-            <p>
-              <a href="action_cameras.html">
+                <img src="img/action_cameras.png" width="71" height="87" alt="Экшен-камеры">
                 <span class="categories-name-sign">Экшен-камеры</span>
               </a>
             </p>
@@ -124,11 +200,7 @@
           <li>
             <p>
               <a href="fitness_braceletes.html">
-                <img src="/img/Фитнес браслеты.jpg" alt="Фитнес браслеты">
-              </a>
-            </p>
-            <p>
-              <a href="fitness_braceletes.html">
+                <img src="img/fitness_braceletes.png" width="107" height="65" alt="Фитнес браслеты">
                 <span class="categories-name-sign">Фитнес браслеты</span>
               </a>
             </p>
@@ -136,11 +208,7 @@
           <li>
             <p>
               <a href="clever_watch.html">
-                <img src="/img/Умные часы.jpg" alt="Умные часы">
-              </a>
-            </p>
-            <p>
-              <a href="clever_watch.html">
+                <img src="img/clever_watch.png" width="56" height="98" alt="Умные часы">
                 <span class="categories-name-sign">Умные часы</span>
               </a>
             </p>
@@ -148,47 +216,50 @@
           <li>
             <p>
               <a href="quadrocopters.html">
-                <img src="/img/Квадрокоптеры.jpg" alt="Квадрокоптеры">
-              </a>
-            </p>
-            <p>
-              <a href="quadrocopters.html">
+                <img src="img/quadrocopters.png" width="132" height="69" alt="Квадрокоптеры">
                 <span class="categories-name-sign">Квадрокоптеры</span>
               </a>
             </p>
           </li>
         </ul> 
-           
-        <section class="delivery-and-garanty">
-          <h2 class="visually-hidden">Краткая информация о доставке, гарантии и кредите</h2>
-          
+  
+      <article class="del-war-cred">
+        <h2 class="visually-hidden">Краткая информация о доставке, гарантии и кредите</h2>
+        <section class="delivery-and-warranty-controlls">          
           <ul class="services">
             <li>
-              <span class="yellow-line vertical-black">ДОСТАВКА</span>
-              <div class="delivery-garanty-credit-annotation">
-                <p class="button">Доставка</p>
-                <p class="font-for-annotation">Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на Ваш этаж.</p>
-                <img class="running-man" href="running-man.jpg" alt="Бегущий человечек">
-              </div>
+              <p class="button">ДОСТАВКА</p>
             </li>
             <li>
-              <span class="yellow-line vertical-black">ГАРАНТИЯ</span>
-              <div class="delivery-garanty-credit-annotation">
-                <p class="button">Гарантия</p>
-                <p class="font-for-annotation">Описание гарантии</p>
-                <img class="garanty-image" href="garanty image.jpg" alt="Изображение гарантии">
-              </div>
+              <p class="button">ГАРАНТИЯ</p>
             </li>
-            <li">
-              <span class="yellow-line vertical-black">КРЕДИТ</span>
-              <div class="delivery-garanty-credit-annotation">
-                <p class="button">Кредит</p>
-                <p class="font-for-annotation">Описание приобретения товара в кредит</p>
-                <img class="credit-image" href="credit image.jpg" alt="Изображение получения кредита">
-              </div>
+            <li>
+              <p class="button">КРЕДИТ</p>
             </li> 
           </ul>
+          <img class="vertical-black-line" src="img/vertical_black_line.png" width="7" height="319" alt="Вертикальная черная линия">
         </section>
+
+        <aside class="delivery-and-warranty-slides">
+          <div class="delivery-warranty-credit-annotation">
+            <p class="slide-header">Доставка</p>
+            <p class="font-for-annotation">Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на Ваш этаж.</p>
+            <img class="running-man" src="img/delivery_image.png" width="136" height="164" alt="Бегущий человечек">
+          </div>
+
+          <div class="delivery-warranty-credit-annotation">
+            <p class="slide-header">Гарантия</p>
+            <p class="font-for-annotation">Если из-за возгорания купленного у нас товара у Вас сгорит<br> дом - не переживайте, мы выдадим Вам новый.<br>Товар, не дом, конечно же.</p>
+            <img class="warranty-image" src="img/warranty_image.png" width="171" height="194" alt="Телефон и гаечный ключ">
+          </div>
+
+          <div class="delivery-warranty-credit-annotation">
+            <p class="button">Кредит</p>
+            <p class="font-for-annotation">Влезть в долговую яму стало проще! Кредитные<br>констультанты подберут для Вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.</p>
+            <img class="credit-image" src="img/credit_image.png" width="156" height="186" alt="Человек тащит ящик">
+          </div>
+        </aside>
+        </article>
         
         <ul class="our-brands">
           <li>
@@ -225,58 +296,59 @@
             <p class="font-for-annotation">Вы можете товар забрать сами, заехав в наш офис. Заодно, Вы сможете проверить работоспособность покупки. Всякое бывает.
             </p>
             <div class="map">
-              <!--Вставляем Яндекс.Карту (пока не знаю как))-->
+              <img src="img/map_image.jpg" width="560" height="222" alt="Изображение карты">
             </div>
             <p class="yellow-line">НАПИШИТЕ НАМ</p>
           </aside>
         </article>
     </main> 
-    
+
     <footer class="main-footer">
-      <p class="our-adress">
+      <p class="top-footer-nav">
         <span class="footer-logo-bottom">DEVICE<br></span>
-        <span class="font-for-annotation">г. Москва, ул. Строителей, 15</span>
-        <img class="short-yellow-line" src="short-yellow-line.jpg">
+        <ul class="login-compare-cart">
+          <li>
+            <a href="#">
+              <span class="login-link-bottom">Войти</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="compare">Сравнить</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="cart">Корзина</span>
+            </a>
+          </li>
+        </ul>
       </p>
-      <div class="footer-navigation">
-        <ul class="site-navigation">
+
+      <p class="middle-footer-nav">
+        <span class="our-adress">г. Москва, ул. Строителей, 15</span>
+        <ul class="delivery-warranty-contacts">
           <li><a href="delivery.html">ДОСТАВКА</a></li>
           <li><a href="garanty.html">ГАРАНТИЯ</a></li>
           <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
+        <span class="our_number">Тел: +7(495)495-95-95</span>
+      </p>
+
+      <p class="bottom-footer-nav">
         <b class="visually-hidden">Мы в соцсетях</b>
+        <img class="short-yellow-line" src="short_yellow_line.png" alt="Короткая желтая полоса">
         <ul class="social-networks">
           <li><a class="social-button" href="#">Фейсбук</a></li>
           <li><a class="social-button" href="#">Инстаграмм</a></li>
           <li><a class="social-button" href="#">Твиттер</a></li>
         </ul>
-      </div>
-      <div class="footer-top-navigation">
-          <ul class="sign-compare-cart">
-            <li>
-              <ul class="user-navigation">
-                <li class="login-link-bottom">Войти</li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">
-                <span class="compare">Сравнить</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="cart">Корзина</span>
-              </a>
-            </li>
-          </ul>
-          <p class="font-for-annotation-bottom">Тел: +7(495)495-95-95</p>
-          <p>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <span class="visually-hidden">Ссылка на сайт интесива</span>
-              <img class="html-icon" src="html.icon.jpg">
-            </a>
-          </p>
-      </div>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <span class="visually-hidden">Ссылка на сайт интесива</span>
+          <img class="html-icon" src="img/icon_html_academy.png" width="27" height="35" alt="Иконка HTML-Academy">
+        </a>
+      </p>
     </footer>
+
   </body>
 </html>
