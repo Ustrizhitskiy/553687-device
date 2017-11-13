@@ -3,18 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <header class="main-header">
-      <span class="footer-logo-top">DEVICE</span>
-      <p class="search"> <!--Здесь будет форма -->Поиск по сайту</p>
+      <a href="index.html" alt="Ссылка на главную страницу">
+        <p class="footer-logo-top">DEVICE</p>
+      </a>
+      
       <nav class="main-navigation">
         <ul class="tophead">
+          <li class="site-search">
+            <label for="search">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </label>
+            <input type="text" name="search" value="Поиск по сайту">
+            <div class="buttons button-search">
+              <input type="submit" value="НАЙТИ">
+            </div>
+          </li>
           <li>
             <ul class="user-navigation">
-              <li></li>   <!-- Здесь будет имя пользователя -->
-              <li class="logout-link-top">Выйти</li>
+              <li>User_name</li>
+              <li class="logout-link-top">
+                <a href="index.html">Выйти</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -53,7 +67,7 @@
       </nav>
     </header>
     
-  <main class="main">
+  <main class="container">
     
     <h1>Моноподы для селфи</h1>
     
@@ -66,28 +80,78 @@
     </ul>
 
     <article class="filter-and-sort">
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
+      <h2 class="visually-hidden">Фильр и сортировка товаров</h2>
+      <section class="section-filter">
+        <h4 class="visually-hidden">Фильтр товаров</h4>
+          <div class="filter-title">
+            <p class="filter-title-font">Фильтр:</p>
+          </div>
+          <form class="filter" method="get" action="https://#">
+            <fieldset>
+              <legend class="font-and-black-line">Стоимость</legend>
+              <!-- Не знаю как сделать ползунки -->
+            </fieldset>
+            <fieldset>
+              <legend class="font-and-black-line">Цвет</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="color-black" id="filter-color-black" checked>
+                  <label for="filter-color-black">Черный</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="color-white" id="filter-color-white">
+                  <label for="filter-color-white">Белый</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="color-blue" id="filter-color-blue" checked>
+                  <label for="filter-color-blue">Синий</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="color-red" id="filter-color-red" checked>
+                  <label for="filter-color-red">Красный</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="color-pink" id="filter-color-pink">
+                  <label for="filter-color-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="font-and-black-line">Bluetooth</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bloototh-group" value="yes" id="filter-yes" checked>
+                  <label for="filter-yes">Есть</label>                  
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bloototh-group" value="no" id="filter-no">
+                  <label for="filter-no">Нет</label>               
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="filter-button button">Показать</button>
+          </form>
+
         <!--Здесь будет форма-->
       </section>
     
       <aside class="catalog">
-        <h2 class="visually-hidden">Список селфи-палок</h2>
+        <h4 class="visually-hidden">Список селфи-палок</h4>
         <ul class="sort-title">
           <li>
-            <span class="filter-title">СОРТИРОВКА:</span>
+            <span class="filter-title-font">СОРТИРОВКА:</span>
           </li>
           <li class="sort-by-price">По цене</li>
           <li class="sort-by-type">По типу</li>
           <li class="sort-by-popul">По популярности</li>
           <li class="sort-up-down">
-            <a href="#">
-              <img class="arrow-up" src="icon_pagination_up.png" alt="Стрелочка пагинации вверх">
+            <a class="arrow-up" href="#">
+              <img src="img/svg/icon-up-dir.svg" alt="Стрелочка сортировки по-возрастанию">
             </a>
           </li>
           <li class="sort-by sort-by-current">
-            <a href="#">
-              <img class="arrow-down" src="icon_pagination_down.png" alt="Стрелочка пагинации вниз">
+            <a class="arrow-down" href="#">
+              <img src="img/svg/icon-down-dir.svg" alt="Стрелочка сортировки по убыванию">
             </a>
           </li>
         </ul>
@@ -146,7 +210,7 @@
             </p>
           </li>
         </ul>
-        <p class="pagination-list">
+        <div class="pagination-list">
           <ul>
             <li class="pagination-item">
               <a class="back" href="#">НАЗАД</a>
@@ -158,14 +222,16 @@
               <a class="forward" href="#">ВПЕРЕД</a>
             </li>
           </ul>
-        </p>
+        </div>
       </aside>
     </article>
   </main>
 
-  <footer class="main-footer">
-      <p class="top-footer-nav">
-        <span class="footer-logo-bottom">DEVICE<br></span>
+    <footer class="main-footer">
+      <div class="top-footer-nav">
+        <a href="index.html" alt="Ссылка на главную страницу">
+          <span class="footer-logo-bottom">DEVICE<br></span>
+        </a>
         <ul class="login-compare-cart">
           <li>
             <a href="#">
@@ -183,9 +249,9 @@
             </a>
           </li>
         </ul>
-      </p>
+      </div>
 
-      <p class="middle-footer-nav">
+      <div class="middle-footer-nav">
         <span class="our-adress">г. Москва, ул. Строителей, 15</span>
         <ul class="delivery-warranty-contacts">
           <li><a href="delivery.html">ДОСТАВКА</a></li>
@@ -193,21 +259,32 @@
           <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
         <span class="our_number">Тел: +7(495)495-95-95</span>
-      </p>
+      </div>
 
-      <p class="bottom-footer-nav">
+      <div class="bottom-footer-nav">
         <b class="visually-hidden">Мы в соцсетях</b>
-        <img class="short-yellow-line" src="short_yellow_line.png" alt="Короткая желтая полоса">
+        <span class="short-yellow-line"></span>   <!--  Короткая желтая полоса  -->
         <ul class="social-networks">
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграмм</a></li>
-          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li class="social-button">
+            <a href="https://www.facebook.com">
+               <img src="img/svg/fb.svg" alt="Ссылка на нашу страничку в Фейсбук">
+            </a>
+          </li>
+          <li class="social-button">
+            <a href="#">
+              <img src="img/svg/instagram.svg" alt="Ссылка на нашу страничку в Инстаграмм">
+            </a>
+          </li>
+          <li class="social-button">
+            <a href="#">
+              <img src="img/svg/twitter.svg" alt="Ссылка на нашу страничку в Твиттер">
+            </a>
+          </li>
         </ul>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">Ссылка на сайт интесива</span>
-          <img class="html-icon" src="img/icon_html_academy.png" width="27" height="35" alt="Иконка HTML-Academy">
+          <img class="html-icon" src="img/svg/logo-html.svg" width="27" height="35" alt="Иконка HTML-Academy">
         </a>
-      </p>
+      </div> 
     </footer>
 
   </body>

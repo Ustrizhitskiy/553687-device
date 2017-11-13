@@ -1,0 +1,121 @@
+.site-navigation {
+    width: 900px;
+    height: 110px;
+    background: rgba(255, 215, 3, 0.4);
+    padding-left: 30px;
+}
+
+.site-navigation ul {
+    list-style-type: none;  /* Убираем маркеры */
+}
+
+.cat-del-war-con {
+    padding-left: 10px;    /*Отступ от края блока */
+    padding-top: 15px;
+}
+
+.cat-del-war-con ul {
+    padding-left: 0px;      /*Отступ внутр списка ul */
+}
+
+.types {
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.submenu {
+    float: left;
+    padding-left: 0px;
+}
+
+.otstup_submenu {
+  padding-left: 50px;  
+}
+
+
+.delivery {
+  padding-left: 10px;
+}
+
+.warranty {
+  padding-left: 30px;
+}
+
+.contacts {
+  padding-left: 80px;
+}
+
+
+
+
+/*  Блок иконок каталога  */
+
+.categories-icons {           /*   Список категорий товаров   */
+      list-style-type: none;  /* Убираем маркеры */
+}
+
+.categories-icons li {
+  float:left;
+  padding: 30px;
+}
+
+.categories-icons li:first-child {
+  clear: both;
+}
+
+.categories-icon-background {     /*   Фон иконок   */
+  width:160px;
+  height: 160px;
+  background: rgba(247, 226, 150, 0.5);
+}
+
+.categories-icon-image {      /*  Сами иконки без фона   */
+  padding-left: 30px;
+  padding-top: 45px;
+}
+
+.categories-icon-sign {       /* Подписи к иконкам  */
+}
+
+/*   Блок информации о доставке, гарантии и кредите   */
+.del-war-cred {
+  clear: both;
+}
+
+/*Блок логотипов брендов */
+.our-brands {
+  list-style-type: none;  /* Убираем маркеры */
+}
+
+.brands-icon {
+  float: left;
+}
+
+.cancel_float {
+  clear: both;
+}
+
+
+
+
+/*   Блок ссылок на социальные сети    (пробный вариант)   */
+
+.social-networks {
+  list-style-type: none;  /* Убираем маркеры */
+}
+
+.social-networks li {
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.social-button {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.html-icon {
+  clear: both;
+  padding-left: 200px;
+}
