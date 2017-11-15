@@ -1,15 +1,20 @@
+.search-site {        /*форма поиска по сайту*/
+  width: 250px;
+}
+
+
 .site-navigation {
     width: 900px;
-    height: 110px;
+    height: 150px;
     background: rgba(255, 215, 3, 0.4);
     padding-left: 30px;
 }
 
-.site-navigation ul {
-    list-style-type: none;  /* Убираем маркеры */
+.site-navigation ul {       /* Список навигации по сайту */
+    list-style: none;  /* Убираем маркеры */
 }
 
-.cat-del-war-con {
+.cat-del-war-con {        /* Ссылки Каталог-Доставка-Гарантия-Контакты */
     padding-left: 10px;    /*Отступ от края блока */
     padding-top: 15px;
 }
@@ -18,20 +23,28 @@
     padding-left: 0px;      /*Отступ внутр списка ul */
 }
 
-.types {
+.types {                  /* Список категорий товаров */
     font-size: 12px;
     padding-top: 10px;
 }
 
-.submenu {
+.submenu {                /* Чтобы Каталог-Доставка-Гарантия-Контакты в одну строку */
     float: left;
     padding-left: 0px;
 }
 
-.otstup_submenu {
-  padding-left: 50px;  
+.container-for-types {    /* Блок для списка категорий товаров */
+  width: 400px;
 }
 
+.types-row {        /* Группировка списка категорий товаров (types): 3-2-1 */
+  float: left;
+}
+
+.row-second,
+.row-third {
+  margin-left: 30px;
+}
 
 .delivery {
   padding-left: 10px;
@@ -46,12 +59,18 @@
 }
 
 
+.big-advirt-photo {         /*  Блок с большой рекламной картинкой  */
+
+}
+
+
+
 
 
 /*  Блок иконок каталога  */
 
 .categories-icons {           /*   Список категорий товаров   */
-      list-style-type: none;  /* Убираем маркеры */
+      list-style: none;  /* Убираем маркеры */
 }
 
 .categories-icons li {
@@ -67,11 +86,22 @@
   width:160px;
   height: 160px;
   background: rgba(247, 226, 150, 0.5);
+  text-align: center;
+}
+
+
+.categories-icon-background::after{
+  content: "";
+  width:160px;
+  height: 160px;
+  background: rgba(247, 226, 150, 0.5);
+  background-image: url(img/svg/popular-2.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;  
 }
 
 .categories-icon-image {      /*  Сами иконки без фона   */
-  padding-left: 30px;
-  padding-top: 45px;
+  padding-top: 43px;
 }
 
 .categories-icon-sign {       /* Подписи к иконкам  */
@@ -84,7 +114,7 @@
 
 /*Блок логотипов брендов */
 .our-brands {
-  list-style-type: none;  /* Убираем маркеры */
+  list-style: none;  /* Убираем маркеры */
 }
 
 .brands-icon {
@@ -101,7 +131,7 @@
 /*   Блок ссылок на социальные сети    (пробный вариант)   */
 
 .social-networks {
-  list-style-type: none;  /* Убираем маркеры */
+  list-style: none;  /* Убираем маркеры */
 }
 
 .social-networks li {

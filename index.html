@@ -10,21 +10,26 @@
       <a href="index.html">
         <p class="footer-logo-top">DEVICE</p>
       </a>
-      <div class="sign-compare-contacts">
+      <nav class="sign-compare-contacts">
         <ul class="tophead">
           <li class="site-search">
-            <label for="search">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </label>
-            <input type="text" id="search" name="search" value="Поиск по сайту">
-            <div class="buttons button-search">
-              <input type="submit" value="НАЙТИ">
-            </div>
+            <form class="search-site" action="#" method="post">
+              <fieldset class="visually-hidden">
+                <legend class="visually-hidden">Поиск товаров по сайту</legend>
+                  <label for="search">
+                    <span class="visually-hidden">Поиск по сайту</span>
+                  </label>
+                  <input type="text" id="search" name="search" value="Поиск по сайту">
+                  <div class="buttons button-search">
+                    <input type="submit" value="НАЙТИ">
+                  </div>
+              </fieldset>
+            </form>
           </li>
           <li>
-            <ul class="user-navigation">
+            <ul class="user-navigation">      <!-- Списком, потому что подразумевается выпадающее меню авторизации   --> 
               <li class="login-link-top">
-                <a href="#">Войти</a>
+                <a href="#">Войти</a>         
               </li>
             </ul>
           </li>
@@ -39,38 +44,28 @@
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
       <nav class="site-navigation">
         <ul class="cat-del-war-con">
-          <li class="submenu">КАТАЛОГ ТОВАРОВ
+          <li class="submenu">       
+            <a href="catalog.html">КАТАЛОГ ТОВАРОВ</a>
+            <img src="img/svg/plus.svg" width="12" height="12" alt="Открыть список категорий товаров"> 
+            <div class="container-for-types">                   
             <ul class="types">
-              <li class="submenu">
-                <ul>
-                  <li>
-                    <a href="virtual_real.html">Виртуальная реальность</a>
-                  </li>
-                  <li>
-                    <a href="monopods.html">Моноподы для селфи</a>
-                  </li>
-                  <li>
-                    <a href="action_cameras.html">Экшн-камеры</a>
-                  </li>
-                </ul>
+              <li class="types-row">
+                <a href="virtual_real.html">Виртуальная реальность<br></a>
+                <a href="monopods.html">Моноподы для селфи<br></a>
+                <a href="action_cameras.html">Экшн-камеры</a>
               </li>
-              <li class="submenu otstup_submenu">
-                <ul>
-                  <li>
-                    <a href="fitnes_braceletes.html">Фитнес-браслеты</a>
-                  </li>
-                  <li>
-                    <a href="clever_watch">Умные часы</a>
-                  </li>
-                </ul>
+              <li class="types-row row-second">
+                <a href="fitnes_braceletes.html">Фитнес-браслеты<br></a>
+                <a href="clever_watch">Умные часы</a>
               </li>
-              <li class="submenu otstup_submenu">
+              <li class="types-row row-third" >
                 <a href="quadrocopters.html">Квадрокоптеры</a>
               </li>
             </ul>
+            </div>
           </li>
           <li>
             <a href="#" class="delivery">ДОСТАВКА</a>
@@ -83,101 +78,102 @@
 
     <main class="main-conteiner">
       <h1 class="visually-hidden">Реклама большого монопода</h1>
-
-      <!-- SLIDE-1 -->
-      <section class="big-advirt-photo">
-        <h2 class="visually-hidden">Слайд с длинной селфи-палкой</h2>
-        <img src="img/big_monopod.png" width="384" height="486" alt="Фото большого монопода">
-      </section>
-      <aside class="ben-stiller">
-        <span class="01">01</span>
-        <p class="font-ben-stiller">Делай селфи,<br>как Бен Стиллер!</p>
-        <p class="font-for-annotation">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-        <a href="#">
-          <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
-        </a>
-        <ul>
-          <li class="slider-option">
-            <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="first" id="slider-one" checked>
-          </li>
-          <li class="slider-option">
-            <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="second" id="slider-second">
-          </li>
-          <li class="slider-option">
-            <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="third" id="slider-third">
-          </li>
-        </ul>
-        <table class="ben-stiller-table">
-          <tr>
-            <td>8,5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-          <tr>
-            <td>Длина палки</td>
-            <td>Вес палки</td>
-            <td>Материал</td>
-          </tr>
-        </table>
-      </aside>
-
-
-      <!-- SLIDE-2 -->
-      <section class="big-advirt-photo">
-        <h2 class="visually-hidden">Слайд с умными часами</h2>
-        <img src="img/big_clever-watch.png" width="345" height="485" alt="Фото умных часов">
-      </section>
-      <aside class="ben-stiller">
-        <span class="01">02</span>
-        <p class="font-ben-stiller">Худеем<br>правильно!</p>
-        <p class="font-for-annotation">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
-        <p class="podrobnee">
-          <a href="clever-watch.html">
-            <span class="yellow-line">ПОДРОБНЕЕ</span>
-          </a>
-        </p>
-        <table class="ben-stiller-table">
-          <tr>
-            <td>48 часов</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Без подзарядки</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </aside>
+      <div class="controlls">
+        <label for="slider-one"><span class="visually=hidden">Переключатель для первого слайда</span></label>
+        <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="first" id="slider-one" checked>
+        <label for="slider-second"><span class="visually=hidden">Переключатель для второго слайда</span></label>
+        <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="second" id="slider-second">
+        <label for="slider-third"><span class="visually=hidden">Переключатель для третьего слайда</span></label>
+        <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="third" id="slider-third">
+      </div>
+      
+      <article class="for-all-slider">
+        <h2 class="visually-hidden">Блок для слайдов</h2>
+        <!-- SLIDE-1 -->
+        <section class="slide">
+          <div class="big-advirt-photo" width="550" height="500">
+            <h2 class="visually-hidden">Слайд с длинной селфи-палкой</h2>
+            <img src="img/big_monopod.png" width="384" height="486" alt="Фото большого монопода">
+          </div>
+          <div class="ben-stiller">
+            <span class="01">01</span>
+            <p class="font-ben-stiller">Делай селфи,<br>как Бен Стиллер!</p>
+            <p class="font-for-annotation">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a href="#">
+              <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
+            </a>        
+            <table class="ben-stiller-table">
+              <tr>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+              <tr>
+                <td>Длина палки</td>
+                <td>Вес палки</td>
+                <td>Материал</td>
+              </tr>
+            </table>
+          </div>
+        </section>
 
 
-      <!-- SLIDE-3 -->
-      <section class="big-advirt-photo">
-        <h2 class="visually-hidden">Слайд с квадрокоптером</h2>
-        <img src="img/big_quadrocopter.png" width="526" height="334" alt="Фото квадрокоптера">
-      </section>
-      <aside class="ben-stiller">
-        <span class="01">03</span>
-        <p class="font-ben-stiller">Порхает как бабочка<br>жалит, как пчела!</p>
-        <p class="font-for-annotation">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замоскированным под стандартную камеру</p>
-        <p class="podrobnee">
-          <a href="quadrocopters.html">
-            <span class="yellow-line">ПОДРОБНЕЕ</span>
-          </a>
-        </p>
-        <table class="ben-stiller-table">
-          <tr>
-            <td>800 м</td>
-            <td>50 м</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Дальность полета</td>
-            <td>Радиус поражения</td>
-            <td></td>
-          </tr>
-        </table>
-      </aside>
+        <!-- SLIDE-2 -->
+        <section class="slide">
+          <div class="big-advirt-photo" width="550" height="500">
+            <h2 class="visually-hidden">Слайд с умными часами</h2>
+            <img src="img/big_clever-watch.png" width="345" height="485" alt="Фото умных часов">
+          </div>
+          <div class="ben-stiller">
+            <span class="01">02</span>
+            <p class="font-ben-stiller">Худеем<br>правильно!</p>
+            <p class="font-for-annotation">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
+            <a href="#">
+              <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
+            </a>
+            <table class="ben-stiller-table">
+              <tr>
+                <td>48 часов</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Без подзарядки</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <!-- SLIDE-3 -->
+        <section>
+          <div class="big-advirt-photo" width="550" height="500">
+          <h2 class="visually-hidden">Слайд с квадрокоптером</h2>
+          <img src="img/big_quadrocopter.png" width="526" height="334" alt="Фото квадрокоптера">
+          </div>
+          <div class="ben-stiller">
+            <span class="01">03</span>
+            <p class="font-ben-stiller">Порхает как бабочка<br>жалит, как пчела!</p>
+            <p class="font-for-annotation">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замоскированным под стандартную камеру</p>
+            <a href="#">
+              <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
+            </a>
+            <table class="ben-stiller-table">
+              <tr>
+                <td>800 м</td>
+                <td>50 м</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Дальность полета</td>
+                <td>Радиус поражения</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </article>
         
         <h2 class="visually-hidden">Категории товаров</h2>
         
@@ -193,7 +189,7 @@
           <li>
             <a href="monopods.html">
               <div class="categories-icon-background">
-                <img class="categories-icon-image" src="img/svg/popular-2.svg" alt="Иконка селфи-палок">
+                <img class="categories-icon-image" src="img/svg/popular-2.svg" alt="Иконка палок для селфи">
               </div><br>
               <span class="categories-icon-sign">Моноподы<br>для селфи</span>
             </a>

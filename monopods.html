@@ -11,17 +11,21 @@
       <a href="index.html">
         <p class="footer-logo-top">DEVICE</p>
       </a>
-      
-      <nav class="main-navigation">
+      <nav class="sign-compare-contacts">
         <ul class="tophead">
           <li class="site-search">
-            <label for="search">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </label>
-            <input type="text" id="search" name="search" value="Поиск по сайту">
-            <div class="buttons button-search">
-              <input type="submit" value="НАЙТИ">
-            </div>
+            <form class="search-site" action="#" method="post">
+              <fieldset class="visually-hidden">
+                <legend class="visually-hidden">Поиск товаров по сайту</legend>
+                  <label for="search">
+                    <span class="visually-hidden">Поиск по сайту</span>
+                  </label>
+                  <input type="text" id="search" name="search" value="Поиск по сайту">
+                  <div class="buttons button-search">
+                    <input type="submit" value="НАЙТИ">
+                  </div>
+              </fieldset>
+            </form>
           </li>
           <li>
             <ul class="user-navigation">
@@ -42,26 +46,33 @@
             </a>
           </li>
         </ul>
-        <ul class="site-navigation">
-          <li>
-            <a href="catalog.html">
-              <span class="catalog-nav">Каталог товаров</span>
-            </a>
+      </nav>
+      <nav class="site-navigation">
+        <ul class="cat-del-war-con">
+          <li class="submenu">          <!-- submenu-->
+            <a href="catalog/catalog.html">КАТАЛОГ ТОВАРОВ</a>
+            <img src="img/svg/plus.svg" width="12" height="12" alt="Открыть список категорий товаров"> 
+            <div class="container-for-types">                   <!-- qw  -->
+            <ul class="types">
+              <li class="types-row">
+                <a href="catalog/virtual_real.html">Виртуальная реальность<br></a>
+                <a href="catalog/monopods.html">Моноподы для селфи<br></a>
+                <a href="catalog/action_cameras.html">Экшн-камеры</a>
+              </li>
+              <li class="types-row row-second">
+                <a href="catalog/fitnes_braceletes.html">Фитнес-браслеты<br></a>
+                <a href="catalog/clever_watch">Умные часы</a>
+              </li>
+              <li class="types-row row-third" >
+                <a href="catalog/quadrocopters.html">Квадрокоптеры</a>
+              </li>
+            </ul>
+            </div>
           </li>
           <li>
-            <a href="delivery.html">
-              <span class="delivery-nav">Доставка</span>
-            </a>
-          </li>
-          <li> 
-            <a href="garanty.html">
-              <span class="cart-nav">Гарантия</span>
-            </a>
-          </li>
-          <li>
-            <a href="contacts.html">
-              <span class="contacts-nav">Контакты</span>
-            </a>
+            <a href="#" class="delivery">ДОСТАВКА</a>
+            <a href="#" class="warranty">ГАРАНТИЯ</a>
+            <a href="#" class="contacts">КОНТАКТЫ</a>
           </li>
         </ul>
       </nav>
