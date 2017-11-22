@@ -1,151 +1,215 @@
-.search-site {        /*форма поиска по сайту*/
-  width: 250px;
+@font-face {
+    font-family: Gilroy; /* Гарнитура шрифта */
+    src: url(../fonts/Gilroy-ExtraBold.otf); /* Путь к файлу со шрифтом */
+   }
+
+@font-face {
+  font-family: Gilroy; /* Гарнитура шрифта */
+  src: url(../fonts/Gilroy-Light.otf); /* Путь к файлу со шрифтом */
+ }
+
+body {
+
+	margin: 0;
+	padding: 0;
+
+	font-family: "Open Sans", Arial, sans-serif;	/*Основной шрифт*/
+	font-size: 15px;							
+	line-height: 30px;			/*Высота строки*/
+	color: #464646;
+
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;  /*Ссылки без подчеркивания */
+	color: #464646;
+}
+
+ul {
+	list-style: none;		/*Убираем маркеры в списках*/
+}
+
+header {
+	width: 1165px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+    background: rgba(240, 197, 46, 0.5);
+}
+
+.header-content {
+	width: 1045px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sign-compare-cart ul,
+.site-navigation ul {
+	padding: 0px;
+}
+
+.header-logo-top {			/* Верхний логотип */
+	position: absolute;
+	margin-top: -13px;
+	font-size: 60px;
+	color: black;
+	font-weight: bold;
+}
+
+.header-logo-top:hover {
+	color: rgba(0, 0, 0, 0.5);
+}
+.header-logo-top:active {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.tophead {				/*Верхняя строка меню хедера  */
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-top: 0px;
+}
+.site-search, 
+.site-search2 {  		/*Ширины флекс-контейнеров */
+	width: 522px;
+}
+
+.tophead .visually-hidden {  /*Скрываем описание формы поиска товаров */
+	display: none;
+}
+
+.search-site-form {		/* Размеры формы поиска */
+	padding-top: 50px;
+	width: 300px;
 }
 
 
-.site-navigation {
-    width: 900px;
-    height: 150px;
-    background: rgba(255, 215, 3, 0.4);
-    padding-left: 30px;
+
+.search-by-site::before {			/* Вставляем значок лупа */
+	content: "";
+	background-image: url("../img/svg/search.svg");
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	margin-right: 10px;
+}
+.search-border {			/* Убираем рамку в поле поиска и делаем фон как у хедера */
+	background-color: transparent;
+	border: transparent;
+	color: rgba(0, 0, 0, 0.5);
+}
+.search-by-site:hover .search-border {		/* При наведении на форму появляется рамка */
+	color: black;
+	border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.site-navigation ul {       /* Список навигации по сайту */
-    list-style: none;  /* Убираем маркеры */
+.search-by-site .button-search {
+	display: none;
+}
+.search-by-site:hover .button-search {		/* При наведении на форму появляется кнопка "Найти" */
+	display: inline;
 }
 
-.cat-del-war-con {        /* Ссылки Каталог-Доставка-Гарантия-Контакты */
-    padding-left: 10px;    /*Отступ от края блока */
-    padding-top: 15px;
+
+.login-link-top {margin-right: 223px;}
+.login-link-top::before {		/* Войти */
+	content: "";
+	background-image: url("../img/svg/user.svg");
+	height: 12px;
+	width: 13px;
+	display: inline-block;
+	margin-right: 10px;
 }
 
-.cat-del-war-con ul {
-    padding-left: 0px;      /*Отступ внутр списка ul */
+.compare {						/*Сравнить*/
+	margin-right: 48px;	
+}
+.compare::before {				
+	content: "";
+	background-image: url("../img/svg/compare.svg");
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	margin-right: 10px;
 }
 
-.types {                  /* Список категорий товаров */
-    font-size: 12px;
-    padding-top: 10px;
+.cart {							/* Корзина */
+	margin-right: 0px;
+}
+.cart::before {
+	content: "";
+	background-image: url("../img/svg/cart.svg");
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin-right: 10px;
 }
 
-.submenu {                /* Чтобы Каталог-Доставка-Гарантия-Контакты в одну строку */
-    float: left;
-    padding-left: 0px;
+
+
+
+.cat-del-war-con {			/*Средняя строка меню хедера */
+	display: flex;
+	justify-content: space-between;
 }
 
-.container-for-types {    /* Блок для списка категорий товаров */
-  width: 400px;
+.types {
+	display: flex;
+	padding-left: 0px;
 }
 
-.types-row {        /* Группировка списка категорий товаров (types): 3-2-1 */
-  float: left;
+.gilroy-font-header {
+	font-family: Gilroy, Arial, serif;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	color: black;
 }
 
-.row-second,
-.row-third {
-  margin-left: 30px;
+.after-plus::after {		/* Вставляем плюсик */
+	content: "";
+	background-image: url("../img/svg/plus.svg");
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	margin-left: 10px;
 }
+
+.submenu .types {				
+	display: none;
+}
+.submenu:hover .types {			/* Создаем выпадающий список */
+	display: flex;
+}
+
+.types-row:not(:last-child) {
+	padding-right: 55px;		/*Отступы между тремя списками в Каталоге товаров*/
+}
+
 
 .delivery {
-  padding-left: 10px;
+	position: absolute;
+	margin-left: -200px;}
+
+.warranty {margin-right: 90px;}
+
+.contacts {margin-right: -3px;}  /* -3px - чтобы убрать отступ от letter-spacing */
+
+
+
+
+
+.about-us-and-contacts,
+.main-container {
+	width: 1165px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.warranty {
-  padding-left: 30px;
-}
-
-.contacts {
-  padding-left: 80px;
-}
-
-
-.big-advirt-photo {         /*  Блок с большой рекламной картинкой  */
-
-}
-
-
-
-
-
-/*  Блок иконок каталога  */
-
-.categories-icons {           /*   Список категорий товаров   */
-      list-style: none;  /* Убираем маркеры */
-}
-
-.categories-icons li {
-  float:left;
-  padding: 30px;
-}
-
-.categories-icons li:first-child {
-  clear: both;
-}
-
-.categories-icon-background {     /*   Фон иконок   */
-  width:160px;
-  height: 160px;
-  background: rgba(247, 226, 150, 0.5);
-  text-align: center;
-}
-
-
-.categories-icon-background::after{
-  content: "";
-  width:160px;
-  height: 160px;
-  background: rgba(247, 226, 150, 0.5);
-  background-image: url(img/svg/popular-2.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;  
-}
-
-.categories-icon-image {      /*  Сами иконки без фона   */
-  padding-top: 43px;
-}
-
-.categories-icon-sign {       /* Подписи к иконкам  */
-}
-
-/*   Блок информации о доставке, гарантии и кредите   */
-.del-war-cred {
-  clear: both;
-}
-
-/*Блок логотипов брендов */
-.our-brands {
-  list-style: none;  /* Убираем маркеры */
-}
-
-.brands-icon {
-  float: left;
-}
-
-.cancel_float {
-  clear: both;
-}
-
-
-
-
-/*   Блок ссылок на социальные сети    (пробный вариант)   */
-
-.social-networks {
-  list-style: none;  /* Убираем маркеры */
-}
-
-.social-networks li {
-  float: left;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-
-.social-button {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.html-icon {
-  clear: both;
-  padding-left: 200px;
+.big-advirt-photo {
+	width: 550px;
+	height: 500px;
 }

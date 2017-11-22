@@ -3,42 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="main-header">
+      <div class="header-content">
       <a href="index.html">
-        <p class="footer-logo-top">DEVICE</p>
+        <p class="header-logo-top">DEVICE</p>
       </a>
-      <nav class="sign-compare-contacts">
+      <nav class="sign-compare-cart">
         <ul class="tophead">
           <li class="site-search">
-            <form class="search-site" action="#" method="post">
-              <fieldset class="visually-hidden">
+            <form class="search-site-form" action="#" method="post">
+    <!--          <fieldset class="border-form">      -->
                 <legend class="visually-hidden">Поиск товаров по сайту</legend>
-                  <label for="search">
-                    <span class="visually-hidden">Поиск по сайту</span>
-                  </label>
-                  <input type="text" id="search" name="search" value="Поиск по сайту">
-                  <div class="buttons button-search">
-                    <input type="submit" value="НАЙТИ">
+                <div class="search-and-button">
+                  <div class="search-by-site">
+                    <label for="search">
+                      <span class="visually-hidden">Поиск по сайту</span>
+                    </label>
+                    <input class="search-border" type="text" id="search" name="search" value="Поиск по сайту">
+                    <input class="button-search" type="submit" value="НАЙТИ">
                   </div>
-              </fieldset>
+ <!--                 <div class="buttons button-searc">
+                    <input type="submit" value="НАЙТИ">
+                  </div>      -->
+                </div>
+    <!--          </fieldset>     -->
             </form>
           </li>
-          <li>
-            <ul class="user-navigation">      <!-- Списком, потому что подразумевается выпадающее меню авторизации   --> 
-              <li class="login-link-top">
-                <a href="#">Войти</a>         
-              </li>
-            </ul>
-          </li>
-          <li>
+          <li class="site-search2">
+            <a href="#">
+              <span class="login-link-top">Войти</span>
+            </a>         
             <a href="#">
               <span class="compare">Сравнить</span>
             </a>
-          </li>
-          <li>
             <a href="#">
               <span class="cart">Корзина</span>
             </a>
@@ -48,9 +50,9 @@
       <nav class="site-navigation">
         <ul class="cat-del-war-con">
           <li class="submenu">       
-            <a href="catalog.html">КАТАЛОГ ТОВАРОВ</a>
-            <img src="img/svg/plus.svg" width="12" height="12" alt="Открыть список категорий товаров"> 
-            <div class="container-for-types">                   
+            <a href="catalog.html">
+              <span class="gilroy-font-header after-plus">КАТАЛОГ ТОВАРОВ</span>
+            </a>
             <ul class="types">
               <li class="types-row">
                 <a href="virtual_real.html">Виртуальная реальность<br></a>
@@ -64,26 +66,48 @@
               <li class="types-row row-third" >
                 <a href="quadrocopters.html">Квадрокоптеры</a>
               </li>
-            </ul>
-            </div>
+            </ul>       
           </li>
           <li>
-            <a href="#" class="delivery">ДОСТАВКА</a>
-            <a href="#" class="warranty">ГАРАНТИЯ</a>
-            <a href="#" class="contacts">КОНТАКТЫ</a>
+            <a href="#">
+              <span class="gilroy-font-header delivery">ДОСТАВКА</span>
+            </a>
+            <a href="#">
+              <span class="gilroy-font-header warranty">ГАРАНТИЯ</span>
+            </a>
+            <a href="#">
+              <span class="gilroy-font-header contacts">КОНТАКТЫ</span>
+            </a>
           </li>
         </ul>
+<!--  <div class="types-container">
+        <ul class="types">
+              <li class="types-row">
+                <a href="virtual_real.html">Виртуальная реальность<br></a>
+                <a href="monopods.html">Моноподы для селфи<br></a>
+                <a href="action_cameras.html">Экшн-камеры</a>
+              </li>
+              <li class="types-row row-second">
+                <a href="fitnes_braceletes.html">Фитнес-браслеты<br></a>
+                <a href="clever_watch">Умные часы</a>
+              </li>
+              <li class="types-row row-third" >
+                <a href="quadrocopters.html">Квадрокоптеры</a>
+              </li>
+            </ul>
+  </div>                  -->
       </nav>
+    </div>
     </header>
 
-    <main class="main-conteiner">
+    <main class="main-container">
       <h1 class="visually-hidden">Реклама большого монопода</h1>
       <div class="controlls">
-        <label for="slider-one"><span class="visually=hidden">Переключатель для первого слайда</span></label>
+        <label for="slider-one"><span class="visually-hidden">Переключатель для первого слайда</span></label>
         <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="first" id="slider-one" checked>
-        <label for="slider-second"><span class="visually=hidden">Переключатель для второго слайда</span></label>
+        <label for="slider-second"><span class="visually-hidden">Переключатель для второго слайда</span></label>
         <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="second" id="slider-second">
-        <label for="slider-third"><span class="visually=hidden">Переключатель для третьего слайда</span></label>
+        <label for="slider-third"><span class="visually-hidden">Переключатель для третьего слайда</span></label>
         <input class="visually-hidden slider-input slider-input-radio" type="radio" name="slider-group" value="third" id="slider-third">
       </div>
       
@@ -91,7 +115,7 @@
         <h2 class="visually-hidden">Блок для слайдов</h2>
         <!-- SLIDE-1 -->
         <section class="slide">
-          <div class="big-advirt-photo" width="550" height="500">
+          <div class="big-advirt-photo">
             <h2 class="visually-hidden">Слайд с длинной селфи-палкой</h2>
             <img src="img/big_monopod.png" width="384" height="486" alt="Фото большого монопода">
           </div>
@@ -120,7 +144,7 @@
 
         <!-- SLIDE-2 -->
         <section class="slide">
-          <div class="big-advirt-photo" width="550" height="500">
+          <div class="big-advirt-photo">
             <h2 class="visually-hidden">Слайд с умными часами</h2>
             <img src="img/big_clever-watch.png" width="345" height="485" alt="Фото умных часов">
           </div>
@@ -148,7 +172,7 @@
 
         <!-- SLIDE-3 -->
         <section>
-          <div class="big-advirt-photo" width="550" height="500">
+          <div class="big-advirt-photo">
           <h2 class="visually-hidden">Слайд с квадрокоптером</h2>
           <img src="img/big_quadrocopter.png" width="526" height="334" alt="Фото квадрокоптера">
           </div>
@@ -249,22 +273,28 @@
           <div class="delivery-warranty-credit-annotation">
             <p class="slide-header">Доставка</p>
             <p class="font-for-annotation">Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на Ваш этаж.</p>
-            <img class="delivery-image" src="img/delivery_image.png" width="136" height="164" alt="Бегущий человечек">
+            <div class="size-of-item">
+              <img class="delivery-image" src="img/svg/delivery.svg" width="136" height="164" alt="Бегущий человечек">
+            </div>
           </div>
 
           <div class="delivery-warranty-credit-annotation">
             <p class="slide-header">Гарантия</p>
             <p class="font-for-annotation">Если из-за возгорания купленного у нас товара у Вас сгорит<br> дом - не переживайте, мы выдадим Вам новый.<br>Товар, не дом, конечно же.</p>
-            <img class="warranty-image" src="img/warranty_image.png" width="171" height="194" alt="Телефон и гаечный ключ">
+            <div class="size-of-item">
+              <img class="warranty-image" src="img/svg/warranty.svg" width="171" height="194" alt="Телефон и гаечный ключ">
+            </div>
           </div>
 
           <div class="delivery-warranty-credit-annotation">
             <p class="button">Кредит</p>
             <p class="font-for-annotation">Влезть в долговую яму стало проще! Кредитные<br>констультанты подберут для Вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.</p>
-            <img class="credit-image" src="img/credit_image.png" width="156" height="186" alt="Человек тащит ящик">
+            <div class="size-of-item">
+              <img class="credit-image" src="img/svg/credit.svg" width="156" height="186" alt="Человек тащит ящик">
+            </div>
           </div>
         </aside>
-        </article>
+      </article>
         
         <ul class="our-brands">
           <li>
@@ -281,7 +311,7 @@
           </li>
         </ul>
         
-        <article class="cancel_float about-us-and-contacts">
+        <article class="cancel-float about-us-and-contacts">
           <h2 class="visually-hidden">Транспортные компании и наш офис</h2>
           <section class="about-us">
             <span class="short-black-line"></span> <!-- Короткая черная линия -->
@@ -345,7 +375,7 @@
             </div>
           </aside>
         </article>
-    </main> 
+    </main>
 
     <footer class="main-footer">
       <div class="top-footer-nav">
@@ -406,6 +436,5 @@
         </a>
       </div> 
     </footer>
-
   </body>
 </html>
