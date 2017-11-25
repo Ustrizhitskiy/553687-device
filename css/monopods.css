@@ -1,0 +1,47 @@
+.user-icon {color: black;}
+.user-icon::before {
+	content: "";
+	background-image: url("../img/svg/user.svg");
+	height: 12px;
+	width: 13px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+.logout-link-top {
+	color: rgba(0, 0, 0, 0.3);
+	margin-left: 20px;
+}
+.logout-link-top:hover,
+.logout-link-top:focus {
+	color: black;
+}
+.logout-link-top:active {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.cart-monopods {
+	float: right;
+}
+.cart-monopods::before {
+	content: "";
+	background-image: url("../img/svg/cart.svg");
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.compare-monopods {
+	margin-right: 40px;
+	float: right;
+}
+.compare-monopods::before {
+	content: "";
+	background-image: url("../img/svg/compare.svg");
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	margin-right: 10px;
+}

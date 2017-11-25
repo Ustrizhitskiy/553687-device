@@ -3,76 +3,85 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/monopods.css">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
 
   <body>
     <header class="main-header">
+      <div class="header-content">
+
       <a href="index.html">
-        <p class="footer-logo-top">DEVICE</p>
+        <p class="header-logo-top">DEVICE</p>
       </a>
-      <nav class="sign-compare-contacts">
+      <nav class="sign-compare-cart">
         <ul class="tophead">
           <li class="site-search">
-            <form class="search-site" action="#" method="post">
-              <fieldset class="visually-hidden">
+            <form class="search-site-form" action="#" method="post">
+    <!--          <fieldset class="border-form">      -->
                 <legend class="visually-hidden">Поиск товаров по сайту</legend>
-                  <label for="search">
-                    <span class="visually-hidden">Поиск по сайту</span>
-                  </label>
-                  <input type="text" id="search" name="search" value="Поиск по сайту">
-                  <div class="buttons button-search">
-                    <input type="submit" value="НАЙТИ">
+                <div class="search-and-button">
+                  <div class="search-by-site">
+                    <label for="search">
+                      <span class="visually-hidden">Поиск по сайту</span>
+                    </label>
+                    <input class="search-border" type="text" id="search" name="search" value="Поиск по сайту">
+                    <input class="button-search" type="submit" value="Найти">
                   </div>
-              </fieldset>
+ <!--                 <div class="buttons button-searc">
+                    <input type="submit" value="НАЙТИ">
+                  </div>      -->
+                </div>
+    <!--          </fieldset>     -->
             </form>
           </li>
-          <li>
-            <ul class="user-navigation">
-              <li>User_name</li>
-              <li class="logout-link-top">
-                <a href="index.html">Выйти</a>
-              </li>
-            </ul>
-          </li>
-          <li>
+          <li class="site-search2">
+            <span class="user-icon">User_name</span>
             <a href="#">
-              <span class="compare">Сравнить</span>
-            </a>
-          </li>
-          <li>
+              <span class="logout-link-top">Выйти</span>
+            </a>        
             <a href="#">
-              <span class="cart">Корзина</span>
+              <span class="cart-monopods">Корзина</span>
+            </a> 
+            <a href="#">
+              <span class="compare-monopods">Сравнить</span>
             </a>
           </li>
         </ul>
       </nav>
       <nav class="site-navigation">
         <ul class="cat-del-war-con">
-          <li class="submenu">          <!-- submenu-->
-            <a href="catalog/catalog.html">КАТАЛОГ ТОВАРОВ</a>
-            <img src="img/svg/plus.svg" width="12" height="12" alt="Открыть список категорий товаров"> 
-            <div class="container-for-types">                   <!-- qw  -->
+          <li class="submenu">       
+            <a href="catalog.html">
+              <span class="gilroy-font-header after-plus">КАТАЛОГ ТОВАРОВ</span>
+            </a>
             <ul class="types">
               <li class="types-row">
-                <a href="catalog/virtual_real.html">Виртуальная реальность<br></a>
-                <a href="catalog/monopods.html">Моноподы для селфи<br></a>
-                <a href="catalog/action_cameras.html">Экшн-камеры</a>
+                <a href="virtual_real.html">Виртуальная реальность<br></a>
+                <a href="monopods.html">Моноподы для селфи<br></a>
+                <a href="action_cameras.html">Экшн-камеры</a>
               </li>
               <li class="types-row row-second">
-                <a href="catalog/fitnes_braceletes.html">Фитнес-браслеты<br></a>
-                <a href="catalog/clever_watch">Умные часы</a>
+                <a href="fitnes_braceletes.html">Фитнес-браслеты<br></a>
+                <a href="clever_watch">Умные часы</a>
               </li>
               <li class="types-row row-third" >
-                <a href="catalog/quadrocopters.html">Квадрокоптеры</a>
+                <a href="quadrocopters.html">Квадрокоптеры</a>
               </li>
-            </ul>
-            </div>
+            </ul>       
           </li>
           <li>
-            <a href="#" class="delivery">ДОСТАВКА</a>
-            <a href="#" class="warranty">ГАРАНТИЯ</a>
-            <a href="#" class="contacts">КОНТАКТЫ</a>
+            <a href="#">
+              <span class="gilroy-font-header delivery">ДОСТАВКА</span>
+            </a>
+            <a href="#">
+              <span class="gilroy-font-header warranty">ГАРАНТИЯ</span>
+            </a>
+            <a href="#">
+              <span class="gilroy-font-header contacts">КОНТАКТЫ</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -99,7 +108,21 @@
           </div>
           <form class="filter" method="get" action="#">
             <fieldset>
-              <legend class="font-and-black-line">Стоимость</legend>
+              <legend>Стоимость</legend>
+              <p class="font-and-black-line">Стоимость</p>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div style="margin-left: 0px; width: 50px" class="bar"></div>   <!-- зеленая полоса -->
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  от <input class="min-price" type="text" value="0">
+                  до <input class="max-price" type="text" value="5000">
+                </div>
+              </div>
               <!-- Не знаю как сделать ползунки -->
             </fieldset>
             <fieldset>
@@ -166,61 +189,62 @@
             </a>
           </li>
         </ul>
-      
-        <ul class="catalog-list">
-          <li class="catalog-item">
-            <p>
-              <a href="catalog-item.html">
-                <img src="img/item_1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              </a>
-            </p>
-            <p>
-              <a href="catalog-item.html">
+        <div class="images">
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <p>
+                <a href="catalog-item.html">
+                  <img src="img/item_1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                </a>
+              </p>
+              <p>
+                <a href="catalog-item.html">
                 <span class="catalog-item-title">Любительская селфи-палка</span>
                 <span class="catalog-item-price">500 руб.</span>
-              </a>
-            </p>
-          </li>
-          <li class="catalog-item">
-            <p>
-              <a href="catalog-item.html">
+                </a>
+              </p>
+            </li>
+            <li class="catalog-item">
+              <p>
+                <a href="catalog-item.html">
                 <img src="img/item_2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               </a>
-            </p>
-            <p>
-              <a href="catalog-item.html">
-                <span class="catalog-item-title">Профессиональная селфи-палка</span>
-                <span class="catalog-item-price">1500 руб.</span>
-              </a>
-            </p>
-          </li>
-          <li class="catalog-item">
-            <p>
-              <a href="catalog-item.html">
-                <img src="img/item_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-              </a>
-            </p>
-            <p>
-              <a href="catalog-item.html">
-                <span class="catalog-item-title">Непотопляемая селфи-палка</span>
-                <span class="catalog-item-price">2500 руб.></span>
-              </a>
-            </p>
-          </li>
-          <li class="catalog-item">
-            <p>
-              <a href="catalog-item.html">
-                <img src="img/item_4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной">
-              </a>
-            </p>
-            <p>
-              <a href="catalog-item.html">
-                <span class="catalog-item-title">Селфи-палка "Следуй за мной"</span>
-                <span class="catalog-item-price">4900 руб.></span>
-              </a>
-            </p>
-          </li>
-        </ul>
+              </p>
+              <p>
+                <a href="catalog-item.html">
+                  <span class="catalog-item-title">Профессиональная селфи-палка</span>
+                  <span class="catalog-item-price">1500 руб.</span>
+                </a>
+              </p>
+            </li>
+            <li class="catalog-item">
+              <p>
+                <a href="catalog-item.html">
+                  <img src="img/item_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                </a>
+              </p>
+              <p>
+                <a href="catalog-item.html">
+                  <span class="catalog-item-title">Непотопляемая селфи-палка</span>
+                  <span class="catalog-item-price">2500 руб.></span>
+                </a>
+              </p>
+            </li>
+            <li class="catalog-item">
+              <p>
+                <a href="catalog-item.html">
+                  <img src="img/item_4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной">
+                </a>
+              </p>
+              <p>
+                <a href="catalog-item.html">
+                  <span class="catalog-item-title">Селфи-палка "Следуй за мной"</span>
+                  <span class="catalog-item-price">4900 руб.</span>
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
         <div class="pagination-list">
           <ul>
             <li class="pagination-item">
