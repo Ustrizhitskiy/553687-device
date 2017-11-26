@@ -66,17 +66,18 @@ footer {
 }
 
 .header-logo-top {			/* Верхний логотип */
-	position: absolute;
-	margin-top: -13px;
-	font-size: 60px;
+	position: relative;
+	margin-top: -15px;
+	font-size: 48px;
 	color: black;
 	font-weight: bold;
 }
 
-.header-logo-top:hover
+.header-logo-top:hover,
 .header-logo-top:focus {
 	color: rgba(0, 0, 0, 0.6);
 }
+
 .header-logo-top:active {
 	color: rgba(0, 0, 0, 0.3);
 }
@@ -91,8 +92,8 @@ footer {
 .site-search, 
 .site-search2 {  		/*Ширины флекс-контейнеров */
 	width: 522px;
-	height: 45px;
-	margin-top: 45px;
+	height: 35px;
+	margin-top: -30px;
 }
 .site-search2 {
 	padding-left: 30px;
@@ -159,6 +160,7 @@ footer {
 
 
 .login-link-top {
+	margin-right: 220px;
 }
 .login-link-top::before {		/* Войти */
 	content: "";
@@ -169,21 +171,8 @@ footer {
 	margin-right: 10px;
 }
 
-.cart {
-	float: right;
-}
-.cart::before {
-	content: "";
-	background-image: url("../img/svg/cart.svg");
-	height: 12px;
-	width: 12px;
-	display: inline-block;
-	margin-right: 10px;
-}
-
 .compare {
-	margin-right: 40px;
-	float: right;
+	margin-right: 35px;
 }
 .compare::before {
 	content: "";
@@ -194,10 +183,22 @@ footer {
 	margin-right: 10px;
 }
 
+.cart {
+}
+.cart::before {
+	content: "";
+	background-image: url("../img/svg/cart.svg");
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin-right: 10px;
+}
 
+.site-navigation {				/*Средняя строка меню хедера */
+	margin-top: 20px;
+}
 
-
-.cat-del-war-con {			/*Средняя строка меню хедера */
+.cat-del-war-con {			
 	display: flex;
 	justify-content: space-between;
 }
@@ -245,12 +246,12 @@ footer {
 
 .types {					/* Размер блока выпадающего списка */
 	width: 1045px;
-	height: 165px;
+	height: 167px;
 	background-color: #f7e296;
 }
 
 .types-row:not(:last-child) {
-	padding-right: 55px;		/*Отступы между тремя списками в Каталоге товаров*/
+	padding-right: 60px;		/*Отступы между тремя списками в Каталоге товаров*/
 }
 .types li a:hover,				/* Поведение ссылок списка при наведенииб нажатии */
 .types li a:focus {
@@ -279,16 +280,14 @@ footer {
 
 /*-------------------- Слайды: контроллы и слайды ------------------*/
 
+.slides-container {				/* Сдвиг всего содержимого блока слайдеров на хедер */
+	margin-top: -120px;
+}
+
 .slides-container {
 	width: 1045px;
 	margin-right: auto;
 	margin-left: auto;
-}
-
-.sliders section {						/* Временная рамка для каждого слайдера */
-	box-shadow: 
-		inset 0 0 0 2px black,
-		inset 0 0 0 5px green;
 }
 
 .slide-1,
@@ -327,7 +326,7 @@ footer {
 	align-items: center;
 }
 
-.slide-3 .big-advirt-photo {
+.slide-3 .big-advirt-photo {		/* Для квадрокоптера, чтобы винт торчал за контент */
 	width: 620px;
 	margin-left: -70px;
 }
@@ -397,9 +396,28 @@ footer {
 	padding-right: 60px;
 }
 
-.slides-container {				/* Сдвиг всего содержимого блока слайдеров на хедер */
-	margin-top: -120px;
+.controlls {						/* Задаем позиционирование коньроллов-кружков */
+	display: inline-block;
+	position: relative;
+	top: 360px;
+	left: 930px;
 }
+.controlls .x {						/* Расстояния от среднего переключателя до соседних */
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.sliders section {						/* Временная рамка для каждого слайдера */
+	box-shadow: 
+	inset 0 0 0 2px black,
+	inset 0 0 0 5px green;
+}
+
+.sliders section:nth-child(3),		/* Скраваем слайды, кроме большого монопода */
+.sliders section:nth-child(4) {
+	display: none;
+}
+
 /*--------------------------- Конец описания слайдов  -----------------------------*/
 
 
@@ -428,6 +446,10 @@ footer {
 	justify-content: space-around;
 }
 
+.down {							/* Для вторй иконки */
+	align-self: flex-end;
+}
+
 .categories-icon-background:hover,
 .categories-icon-background:active {
 	background-color: rgb(240, 197, 46);
@@ -452,6 +474,7 @@ footer {
 
 
 /*-------------------------- Краткое описание о доставке, гарантии, кредите ------------*/
+
 .del-war-cred-box {
 	background-color: rgb(229, 229, 299);
 }
@@ -485,6 +508,13 @@ footer {
 	background-image: url(../img/yellow_thin.png);
 	background-repeat: no-repeat;
 	background-position-y: center;
+}
+
+.services li:nth-child(1) p {		/* Положение черного фона на ДОСТАВКЕ по умолчанию */
+	width: 100%;
+	background-image: url(../img/black_service.png);
+	background-repeat: repeat;
+	color: rgba(240, 197, 46, 0.5);
 }
 
 .service-button:hover,
@@ -538,10 +568,14 @@ footer {
 }
 
 .del-war-cred {
-	margin-top: -65px;
+	position: relative;
+	top: -65px;
 }
 
 
+.delivery-and-warranty-slides > div:not(:first-child) {			/* Скрываем два других слайда, кроме доставки */
+	display: none;
+}
 
 
 /*------------------------- Бренды -----------------------------------*/
@@ -647,8 +681,9 @@ footer {
 
 /*---------------------------- Футер -------------------------------------------*/
 footer {
-	background-color: gray;
+	background-color: #464646;
 	padding-top: 60px;
+	height: 250px;
 }
 
 .footer-content {					/* Три блока футера */
@@ -657,6 +692,7 @@ footer {
 	margin-right: auto;
 	display: flex;
 	flex-direction: column;
+	color: white;
 }
 
 .top-footer-nav {				/* Верхняя строка футера  */
@@ -675,12 +711,52 @@ footer {
 	font-weight: bold;
 	color: rgba(255, 198, 0, 1);
 }
-.footer-logo-bottom:hover
+.footer-logo-bottom:hover,
 .footer-logo-bottom:focus {
 	color: rgba(255, 198, 0, 0.6);
 }
 .footer-logo-bottom:active {
 	color: rgba(255, 198, 0, 0.3);
+}
+
+.login-compare-cart span {				/* Войти в футере */
+	color: rgba(255, 255, 255, 0.6);
+}
+.login-compare-cart span:hover,
+.login-compare-cart span:focus {
+	color: rgba(255, 255, 255, 1);
+}
+
+.login-compare-cart span:active {
+	color: rgba(255, 255, 255, 0.3);
+	opacity: 0.3;
+}
+
+.login-link-bottom::before {
+	content: "";
+	background-image: url("../img/svg/user-yellow.svg");
+	height: 12px;
+	width: 13px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.compare-bottom::before {
+	content: "";
+	background-image: url("../img/svg/compare-yellow.svg");
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.cart-bottom::before {
+	content: "";
+	background-image: url("../img/svg/cart-yellow.svg");
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin-right: 10px;
 }
 
 .middle-footer-nav ul {			/* Убираем отступы для списка */
@@ -696,6 +772,28 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	width: 30%;
+	margin-right: 150px;
+}
+
+.delivery-warranty-contacts li:nth-child(2){
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.delivery-warranty-contacts span {
+	font-family: Gilroy, Arial, serif;
+	font-weight: bold;
+	font-size:  18px;
+	letter-spacing: 0.2em;
+	color: rgba(255, 255, 255, 1);
+}
+.delivery-warranty-contacts li:hover,
+.delivery-warranty-contacts li:focus {
+	opacity: 0.6;
+}
+
+.delivery-warranty-contacts li:active {
+	opacity: 0.3;
 }
 
 .bottom-footer-nav {			/*Нижняя строка футера из трех блоков  */
@@ -703,15 +801,53 @@ footer {
 	justify-content: space-between;
 }
 
-.bottom-footer-nav ul {  		/* Убираем отступы длясписка соцсетей  */
+.short-yellow-line {
+	width: 60px;
+	height: 10px;
+	margin-top: 25px;
+	background-color: rgba(255, 198, 0, 1);
+}
+
+.bottom-footer-nav ul {  		/* Убираем отступы для списка соцсетей  */
 	padding: 0;
 }
 
 .social-networks {
 	display: flex;
 	justify-content: space-between;
+	margin-right: 40px;
 }
 
+.social-networks li:nth-child(2) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.social-networks li {
+	opacity: 0.6;
+}
+.social-networks li:hover {
+	opacity: 1;
+}
+
+.social-networks li:active {
+	opacity: 0.3;
+}
+
+.bottom-footer-nav > a {		/* Для ссылки на сайт Академии */
+	margin-top: 15px;
+}
+
+.html-icon {
+	opacity: 1;	
+}
+.html-icon:hover,
+.html-icon:focus {
+	opacity: 0.6;
+}
+.html-icon:active {
+	opacity: 0.3;
+}
 
 /*---------------------------- Конец футера --------------------------------------*/
 
