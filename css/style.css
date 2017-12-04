@@ -8,6 +8,12 @@
  	src: url(../fonts/gilroylight.woff2); /* Путь к файлу со шрифтом */
  }
 
+html {
+	width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body {
 
 	margin: 0;
@@ -52,7 +58,9 @@ header {
 	border: 1px solid red;
 }
 
-.visually-hidden {display: none;}
+.visually-hidden {
+	display: none;
+}
 
 
 /*------------------- Хедер ------------------*/
@@ -91,13 +99,12 @@ header {
 	flex-direction: row;
 	align-items: flex-end;
 	justify-content: space-between;
-	margin-top: 0px;
 }
 .site-search, 
 .site-search2 {  		/*Ширины флекс-контейнеров */
 	width: 522px;
-	height: 35px;
-	margin-top: -30px;
+	height: 45px;
+	margin-top: -25px;
 }
 .site-search2 {
 	padding-left: 30px;
@@ -252,7 +259,7 @@ header {
 
 .types {					/* Размер блока выпадающего списка */
 	width: 1045px;
-	height: 167px;
+	height: 152px;
 	background-color: #f7e296;
 }
 
@@ -340,8 +347,8 @@ header {
 
 .short-white-line {			/* Короткая белая полоса в слайде */
 	width: 100px;
-	height: 8px;
-	margin-top: 40px;
+	height: 6px;
+	margin-top: 50px;
 	background-color: #ffffff;
 }
 
@@ -355,15 +362,18 @@ header {
 .font-ben-stiller {			/* Жирная надпись "Делай селфи, как..."  */
 	font-family: Gilroy, Arial, serif;
 	font-weight: bold;
-	line-height: 100%;
+	line-height: 50px;
 	font-size: 47px;
 	letter-spacing: 0.01em;
+	line-height: 55px;
 	color: #000000;
 	margin-top: 0;			/*Для наезда на блок 01 */
 }
 
-.p {						/* Отступ "ПОДРОБНЕЕ" от рекламного текста */
-	padding-bottom: 20px;
+.annotation1 {						/* Отступ от "Делай селфи" и ПОДРОБНЕЕ" */
+	margin-bottom: 45px;
+	margin-top: -35px;
+	margin-right: 20px;
 }
 
 
@@ -388,7 +398,7 @@ header {
 }
 
 .ben-stiller-table {
-	margin-top: 50px;
+	margin-top: 55px;
 }
 
 .up-tr-ben-stiller-table {		/* Верхняя строка таблицы характеристик товара в слайде */
@@ -402,31 +412,25 @@ header {
 .ben-stiller-table td {			/* Отступы столбцов в таблице слайда */
 	padding-right: 60px;
 }
-/*
-.sliders section {						Временная рамка для каждого слайдера 
-	box-shadow: 
-	inset 0 0 0 2px black,
-	inset 0 0 0 5px green;
-}
-*/
+
 .radio-left {				/*   Задаем позиционирование контроллов-кружков */
 	position: absolute;
-	margin-top: 340px;
-	margin-left: 930px;
+	margin-top: 330px;
+	margin-left: 945px;
 	z-index: 3;
 }
 
 .radio-middle {
 	position: absolute;
-	margin-top: 340px;
-	margin-left: 970px;
+	margin-top: 330px;
+	margin-left: 980px;
 	z-index: 3;
 }
 
 .radio-right {
 	position: absolute;
-	margin-top: 340px;
-	margin-left: 1010px;
+	margin-top: 330px;
+	margin-left: 1015px;
 	z-index: 3;
 }
 
@@ -458,7 +462,7 @@ header {
 	width: 1165px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
+	margin-top: 90px;
 }
 
 .box-categories ul {			/* Убираем отступ у ul */
@@ -492,11 +496,14 @@ header {
 	opacity: 0.3;
 }
 
+.categories-icons li {width: 160px;}
+
 .categories-icon-sign {		/* Подписи к иконкам  */
 	font-family: Gilroy, Arial, serif;
 	font-weight: bold;
 	font-size: 18px;
 	letter-spacing: 0.01em;
+	line-height: 100%;
 	color: black;
 }
 .categories-icon-sign:active {
@@ -514,6 +521,7 @@ header {
 
 .del-war-cred {				/* Блок с контентом  */
 	width: 1165px;	
+	height: 270px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -533,7 +541,7 @@ header {
 	width: 8px;
 	height: 300px;
 	background: #000000;
-	margin-top: -20px;
+	margin-top: -10px;
 }
 
 .service-button {
@@ -1051,7 +1059,7 @@ ul.breadcrumbs a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 925px;
+    width: 825px;
     height: 70px;
 }
 
@@ -1060,7 +1068,7 @@ ul.breadcrumbs a:active {
 }
 
 .sort span:first-child {	/* Отступ вправо от слова Сортировка */
-	padding-right: 70px;
+	padding-right: 55px;
 }
 
 .sort span:not(:first-child) {             /*  Свойства видов сортировки  */
@@ -1159,6 +1167,7 @@ ul.breadcrumbs a:active {
     width: 270px;
     background-color: #efefef;
     padding-left: 60px;
+    padding-top: 65px;
 }
 
 .filter fieldset {			/* Убираем рамку в блоке формы */
@@ -1178,8 +1187,8 @@ ul.breadcrumbs a:active {
 
 .font-and-black-line {		/* Заголовки фильтров */
 	display: block;
-	margin-bottom: 20px;
-	margin-top: 5px;
+	margin-bottom: 32px;
+	margin-top: 7px;
 	margin-left: -15px;
 	font-family: Gilroy, Arial, serif;
 	font-weight: bold;
@@ -1187,9 +1196,10 @@ ul.breadcrumbs a:active {
 	letter-spacing: 0.01em;
 	color: #000000;
 }
+					/********* Стоимость *************/
 
 .scale {				/* Весь ползунок стоимости */
-	width: 200px;
+	width: 190px;
 	height: 2px;
 	background-color: #dbdbdb;
 	margin-left: -5px;
@@ -1238,12 +1248,16 @@ ul.breadcrumbs a:active {
 	margin-left: -20px;
 }
 
+.range-filter {
+	margin-bottom: 12px;
+}
 					/************Цвет************/
 
 .filter-checkbox {				/* Блок с выбором цветов */
 	padding: 0px;
-	margin-top: -10px;
+	margin-top: -13px;
 	margin-left: -15px;
+	margin-bottom: 23px;
 }
 
 .font-filter-color {			/* Слова Черный, Белый и т. д., Есть, Нет*/
@@ -1253,7 +1267,7 @@ ul.breadcrumbs a:active {
 
 .filter-option label {			/* Свойства чекбосов (с подписью) исходные */
     width: 100px;
-    height: 25px;
+    height: 30px;
     display: block;
     position: relative;
     margin-bottom: 10px;
@@ -1285,13 +1299,13 @@ ul.breadcrumbs a:active {
 
 .filter-radio {							/* Блок с выбором наличия bluetooth */
 	padding: 0px;
-	margin-top: -10px;
+	margin-top: -13px;
 	margin-left: -15px;
 }
 
 .filter-option-radio label {			/* Свойства радиокнопок (с подписью) исходные */	
     width: 100px;
-    height: 25px;
+    height: 30px;
     display: block;
     position: relative;
     margin-bottom: 10px;
@@ -1314,22 +1328,29 @@ ul.breadcrumbs a:active {
     background-image: url(../img/svg/radio-on.svg);
 }
 
-
+.filter-button {
+	margin-top: 20px;
+}
 
 
 				/*********** Фотографии **********/
 
 .catalog {				/* Блок правой колонки с фотографиями и нижней строкой пагинации*/
     display: block;
-    width: 925px;
+    width: 825px;
 }
 
 .catalog-list {			/* Блок фотографий */
 	display: flex;
 	justify-content: space-between;
+	margin-top: 25px;
 	margin-left: 0;
 	padding: 0;
 	flex-wrap: wrap;
+}
+
+.catalog-item {
+	margin-top: 45px;
 }
 
 .catalog-item:nth-child(odd) {	/* Для нечетных фотографий */
@@ -1339,9 +1360,24 @@ ul.breadcrumbs a:active {
 .annotation-and-price {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 20px;
 }
 
+.catalog-item-title {			/* Подписи к изображениям селфи-палок */
+	width: 250px;
+	font-family: Gilroy, Arial, serif;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+	color: #000000;
+}
 
+.catalog-item-price {			/* Стоимость */
+	font-family: Gilroy, Arial, serif;
+	font-size: 16px;
+	letter-spacing: 0.01em;
+	color: #464646;
+}
 
 
 
@@ -1350,11 +1386,117 @@ ul.breadcrumbs a:active {
 .pagination-list {				/* Строка пагинации */
 	display: flex;
 	justify-content: space-between;
+	height: 70px;
 	margin-left: 70px;
+	margin-top: 45px;
+	background-color: #ebebeb;
+	align-items: center;
+	padding: 0 30px;
 }
 
 .pages-pagination {				/* Номера страниц в пагинации */
 	display: flex;
 	margin: 0;
 	padding: 0;
+}
+
+.pagination-item {				/* Отступы между номерами страниц в пагинации */
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.back,
+.forward,
+.pages-pagination {
+	font-family: Gilroy, Arial, serif;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	color: #000000;
+}
+
+
+
+
+
+ 				/*************** Форма обратной связи *************/
+
+.form-write-us {		/* Все окно */
+/*	position: fixed;  */
+	top: 100px;
+	left: 310px;
+	width: 910px;
+	height: 550px;
+	border: 2px solid black;
+	z-index: 10;
+	background-color: #ffffff;
+}
+
+.exit-write-us {		/* Кнопка закрытия окна */
+	position: relative;
+	top: 22px;
+	left: 833px;
+	width: 55px;
+	height: 55px;
+}
+
+.name-and-email {		/* Контейнер с полями для ввода имени и почты */
+	width: 710px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.your-name-sign {		/* Подписи к полям */
+	margin: 0;
+	font-family: Gilroy, Arial, serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.write-us-your-name,
+.write-us-your-email {
+	width: 335px;
+}
+
+.box-input {				/* Поля ввода */
+	width: 315px;
+	height: 50px;
+	background-color: #f2f2f2;
+	border: none;
+	color: rgba(0, 0, 0, 0.4);
+	padding-left: 20px;
+}
+
+.write-us-your-message { 
+	margin-top: 50px;
+	width: 710px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.input-your-message {		/* Поле ввода сообщения */
+	width: 710px;
+	height: 155px;
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.send-button {				/* Сама кнопка Отправить */
+	width: 150px;
+	margin-top: 30px;
+	margin-left: 135px;
+	border: none;
+	background-color: transparent;
+}
+
+.send {						/* Надпись Отправить на кнопке */
+	font-family: Gilroy, Arial, serif;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	cursor: pointer;
 }
