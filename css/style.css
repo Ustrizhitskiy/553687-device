@@ -1,11 +1,11 @@
 @font-face {
     font-family: Gilroy; /* Гарнитура шрифта */
-    src: url(../fonts/Gilroy-ExtraBold.otf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/gilroyextrabold.woff2); /* Путь к файлу со шрифтом */
    }
 
 @font-face {
   	font-family: Gilroy; /* Гарнитура шрифта */
- 	src: url(../fonts/Gilroy-Light.otf); /* Путь к файлу со шрифтом */
+ 	src: url(../fonts/gilroylight.woff2); /* Путь к файлу со шрифтом */
  }
 
 body {
@@ -23,7 +23,7 @@ body {
 
 a {
 	text-decoration: none;  /*Ссылки без подчеркивания */
-	color: black;
+	color: #000000;
 }
 
 ul {
@@ -38,13 +38,17 @@ header {
     background: rgba(240, 197, 46, 0.5);
 }
 
-header,
-.slides-container,
-.box-categories,
+header {
+	border: 1px solid #ffffff;		/* При отмене сдвигается логотип */
+}
+
+/*header,*/
+/*.box-categories,*/
 .del-war-cred-box,
-.box-our-brands,
-.box-map-and-contacts,
-footer {
+/*.box-our-brands,*/
+/*.about-us-and-contacts,*/
+/*.podrobnee-and-write-us,*/
+/*.box-map-and-contacts */{
 	border: 1px solid red;
 }
 
@@ -69,7 +73,7 @@ footer {
 	position: relative;
 	margin-top: -15px;
 	font-size: 48px;
-	color: black;
+	color: #000000;
 	font-weight: bold;
 }
 
@@ -130,22 +134,24 @@ footer {
 }
 .search-by-site:hover .button-search {		/* При наведении на форму появляется кнопка "Найти" */
 	display: inline;
+	padding: 10px;		/* Отступ надписи внутри кнопки */
 }
 .button-search {
 	background-color: transparent;
 	height: 45px;
 	border: 2px solid black;
 	padding-top: 23px;
+	margin-left: -5px;
 }
 .button-search:hover,
 .button-search:focus {
 	cursor: pointer;
-	color: white;
-	background-color: black;
+	color: #ffffff;
+	background-color: #000000;
 }
 .button-search:active {
 	color: rgba(255, 255, 255, 0.3);
-	background-color: black;
+	background-color: #000000;
 }
 
 .site-search2 a:hover,			/* Покой-наведение-нажатие верхнего меню хедера */
@@ -208,7 +214,7 @@ footer {
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.2em;
-	color: black;
+	color: #000000;
 }
 .gilroy-font-header:hover,
 .gilroy-font-header:focus {
@@ -281,11 +287,12 @@ footer {
 /*-------------------- Слайды: контроллы и слайды ------------------*/
 
 .slides-container {				/* Сдвиг всего содержимого блока слайдеров на хедер */
-	margin-top: -120px;
+	margin-top: -125px;
 }
 
 .slides-container {
 	width: 1045px;
+	height: 500px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -322,7 +329,7 @@ footer {
 .big-advirt-photo {		/*  Размеры блока с фотографией  */
 	width: 550px;
 	height: 500px;
-	display flex;
+	display: flex;
 	align-items: center;
 }
 
@@ -333,15 +340,15 @@ footer {
 
 .short-white-line {			/* Короткая белая полоса в слайде */
 	width: 100px;
-	height: 10px;
+	height: 8px;
 	margin-top: 40px;
-	background-color: red;
+	background-color: #ffffff;
 }
 
 .null-one {					/* Большая цифра-номер слайда */
 	font-family: Gilroy, Arial, serif;
 	font-weight: bold;
-	color: red;
+	color: #ffffff;
 	font-size: 179px;
 }
 
@@ -351,7 +358,7 @@ footer {
 	line-height: 100%;
 	font-size: 47px;
 	letter-spacing: 0.01em;
-	color: black;
+	color: #000000;
 	margin-top: 0;			/*Для наезда на блок 01 */
 }
 
@@ -389,33 +396,58 @@ footer {
 	line-height: 100%;
 	font-size: 36px;
 	letter-spacing: 0.01em;
-	color: black
+	color: #000000;
 }
 
 .ben-stiller-table td {			/* Отступы столбцов в таблице слайда */
 	padding-right: 60px;
 }
-
-.controlls {						/* Задаем позиционирование коньроллов-кружков */
-	display: inline-block;
-	position: relative;
-	top: 360px;
-	left: 930px;
-}
-.controlls .x {						/* Расстояния от среднего переключателя до соседних */
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
-.sliders section {						/* Временная рамка для каждого слайдера */
+/*
+.sliders section {						Временная рамка для каждого слайдера 
 	box-shadow: 
 	inset 0 0 0 2px black,
 	inset 0 0 0 5px green;
 }
+*/
+.radio-left {				/*   Задаем позиционирование контроллов-кружков */
+	position: absolute;
+	margin-top: 340px;
+	margin-left: 930px;
+	z-index: 3;
+}
 
-.sliders section:nth-child(3),		/* Скраваем слайды, кроме большого монопода */
-.sliders section:nth-child(4) {
-	display: none;
+.radio-middle {
+	position: absolute;
+	margin-top: 340px;
+	margin-left: 970px;
+	z-index: 3;
+}
+
+.radio-right {
+	position: absolute;
+	margin-top: 340px;
+	margin-left: 1010px;
+	z-index: 3;
+}
+
+.slider-input-radio:hover {
+	cursor: pointer;
+}
+
+.sliders {
+	position: relative;
+}
+.slides {
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+
+#slider-one:checked ~ .sliders > .slide-1,
+#slider-second:checked ~ .sliders > .slide-2,
+#slider-third:checked ~ .sliders > .slide-3 {
+	opacity: 1;
+	z-index: 1;
 }
 
 /*--------------------------- Конец описания слайдов  -----------------------------*/
@@ -426,6 +458,7 @@ footer {
 	width: 1165px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 100px;
 }
 
 .box-categories ul {			/* Убираем отступ у ul */
@@ -452,7 +485,7 @@ footer {
 
 .categories-icon-background:hover,
 .categories-icon-background:active {
-	background-color: rgb(240, 197, 46);
+	background-color: #f0c52e;
 }
 
 .categories-icon-background:active .categories-icon-image {
@@ -476,7 +509,7 @@ footer {
 /*-------------------------- Краткое описание о доставке, гарантии, кредите ------------*/
 
 .del-war-cred-box {
-	background-color: rgb(229, 229, 299);
+	background-color: #e5e5e5;
 }
 
 .del-war-cred {				/* Блок с контентом  */
@@ -493,13 +526,13 @@ footer {
 	font-weight: bold;
 	letter-spacing: 0.2em;
 	line-height: 2.5em;
-	color: black;
+	color: #000000;
 }
 
 .vertical-black-line {		/* Черная вертикальная линия */
-	width: 10px;
+	width: 8px;
 	height: 300px;
-	background: black;
+	background: #000000;
 	margin-top: -20px;
 }
 
@@ -539,11 +572,11 @@ footer {
 }
 
 .delivery-and-warranty-controlls {
-	width: 333px;
+	width: 275px;
 	border: 1px solid black;
 }
 .delivery-and-warranty-slides {			
-	width: 822px;
+	width: 880px;
 	border: 1px solid black;
 }
 
@@ -552,12 +585,13 @@ footer {
 	font-size: 47px;
 	font-weight: bold;
 	letter-spacing: 0.1em;
-	color: black;
+	color: #000000;
 }
 
-.delivery-warranty-credit-annotation {  /* Правая колона с описанием */
+.delivery-warranty-credit-annotation {  /* Правая колонка с описанием */
 	display: flex;
 	justify-content: space-around;
+	margin-left: 50px;
 }
 
 .size-of-item {
@@ -615,15 +649,14 @@ footer {
 	width: 1165px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid red;
 	display: flex;
 	justify-content: space-around;
 }
 
 .short-black-line {
 	width: 80px;
-	height: 10px;
-	background-color: black;
+	height: 8px;
+	background-color: #000000;
 }
 
 .sign-about {								/* Загогловки разделов */
@@ -631,7 +664,7 @@ footer {
 	font-weight: bold;
 	font-size: 47px;
 	letter-spacing: 0.01em;
-	color: black;
+	color: #000000;
 }
 
 .transport-companys {				/* Транспортные компании */
@@ -640,7 +673,7 @@ footer {
 	font-family: Gilroy, Arial, serif;
 	font-weight: bold;
 	line-height: 35px;
-	color: black;
+	color: #000000;
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
@@ -650,7 +683,7 @@ footer {
 	margin: 20px auto 60px auto;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid blue;	
+	
 }
 
 .wirte1, .wirte2 {
@@ -692,7 +725,7 @@ footer {
 	margin-right: auto;
 	display: flex;
 	flex-direction: column;
-	color: white;
+	color: #ffffff;
 }
 
 .top-footer-nav {				/* Верхняя строка футера  */
@@ -704,12 +737,13 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	width: 30%;
+	margin: 0;
 }
 
 .footer-logo-bottom {
 	font-size: 48px;
 	font-weight: bold;
-	color: rgba(255, 198, 0, 1);
+	color: #ffc600;
 }
 .footer-logo-bottom:hover,
 .footer-logo-bottom:focus {
@@ -724,7 +758,7 @@ footer {
 }
 .login-compare-cart span:hover,
 .login-compare-cart span:focus {
-	color: rgba(255, 255, 255, 1);
+	color: #ffffff;
 }
 
 .login-compare-cart span:active {
@@ -740,6 +774,9 @@ footer {
 	display: inline-block;
 	margin-right: 10px;
 }
+.login-link-bottom:hover::before {
+	opacity: 0.6;
+}
 
 .compare-bottom::before {
 	content: "";
@@ -749,6 +786,9 @@ footer {
 	display: inline-block;
 	margin-right: 10px;
 }
+.compare-bottom:hover::before {
+	opacity: 0.6;
+}
 
 .cart-bottom::before {
 	content: "";
@@ -757,6 +797,9 @@ footer {
 	width: 12px;
 	display: inline-block;
 	margin-right: 10px;
+}
+.cart-bottom:hover::before {
+	opacity: 0.6;
 }
 
 .middle-footer-nav ul {			/* Убираем отступы для списка */
@@ -785,7 +828,7 @@ footer {
 	font-weight: bold;
 	font-size:  18px;
 	letter-spacing: 0.2em;
-	color: rgba(255, 255, 255, 1);
+	color: #ffffff;
 }
 .delivery-warranty-contacts li:hover,
 .delivery-warranty-contacts li:focus {
@@ -803,9 +846,9 @@ footer {
 
 .short-yellow-line {
 	width: 60px;
-	height: 10px;
+	height: 8px;
 	margin-top: 25px;
-	background-color: rgba(255, 198, 0, 1);
+	background-color: #ffc600;
 }
 
 .bottom-footer-nav ul {  		/* Убираем отступы для списка соцсетей  */
@@ -860,3 +903,458 @@ footer {
 	box-shadow: -2px 15px 20px 5px rgba(4, 6, 6, 0.2);
 }
 
+
+
+
+
+/************************************* Стилизация страницы каталога ***************/
+
+.user-icon {color: black;}
+.user-icon::before {
+	content: "";
+	background-image: url("../img/svg/user.svg");
+	height: 12px;
+	width: 13px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+.logout-link-top {
+	color: rgba(0, 0, 0, 0.3);
+}
+.logout-link-top:hover,
+.logout-link-top:focus {
+	color: black;
+}
+.logout-link-top:active {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.site-search2 {
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.cart-monopods::before {
+	content: "";
+	background-image: url("../img/svg/cart.svg");
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.compare-monopods {
+	margin-right: -50px;
+}
+.compare-monopods::before {
+	content: "";
+	background-image: url("../img/svg/compare.svg");
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+/*--------------------------- Конец описания хедера ---------------------------*/
+
+
+/*--------------------------- Хлебные крошки -------------------------------*/
+
+
+
+.monopods-for-selfy {
+	display: block;
+	width: 1045px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Gilroy, Arial, serif; 
+	font-size: 47px;
+	letter-spacing: 0.01em;
+	font-weight: bold;
+
+}
+
+.breadcrumbs,
+.breadcrumbs a {	
+	padding: 0;
+	width: 1045px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-current {
+	color: black;
+}
+
+ul.breadcrumbs > li {
+	display: inline;
+	margin-right: 20px;
+}
+
+ul.breadcrumbs a:hover,
+ul.breadcrumbs a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+ul.breadcrumbs a:active {
+	color: rgba(0, 0, 0, 0.1);
+}
+
+/*-------------------------------- Конец хлебных крошек ---------------------------*/
+
+
+/*-------------------------------- Строка "Фильтр" и "Сортировка" -----------------------*/
+
+.string {				/* целая строка */
+	display: flex;
+	height: 70px;
+}
+
+.fiter-and-sort-title {		/* Содержимое строки */
+	display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1165px;
+    background: #ebebeb;
+}
+
+.left-string-top {				/* Левая часть строки, пустая,  без контента */
+  background-color: #dcdcdc;
+  flex-grow: 1;
+}
+
+.right-string-top {				/* Правая часть строки, пустая, без контента */
+  background-color: #ebebeb;
+  flex-grow: 1;
+}
+
+.fiter-and-sort-title {		/* Блок с контентом */
+    display: flex;
+    align-items: center;
+}
+
+.filter-title {				/* Заголовок Фильтр */
+	display: flex;
+    width: 270px;
+    height: 70px;
+    background-color: #dcdcdc;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.sort-title {				/* Заголовок Сортировка.... */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 925px;
+    height: 70px;
+}
+
+.sort {
+	margin-left: 70px;		/* Отступ внутри блока сортировки у слова Сортировка */
+}
+
+.sort span:first-child {	/* Отступ вправо от слова Сортировка */
+	padding-right: 70px;
+}
+
+.sort span:not(:first-child) {             /*  Свойства видов сортировки  */
+    padding-right: 30px;
+    font-weight: 14px;
+    letter-spacing: 0;
+}
+
+.arrow-up {				/* Отступы между стрелками */
+    margin-right: 10px;
+}
+
+.filter-title-font {
+	font-family: Gilroy, Arial, serif;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 0.2em;
+	color: #000000;
+}
+
+.sort-by-price {
+	color: black;		/* Надпись По цене */
+}
+
+.sort-by-type,
+.sort-by-popul {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-by-price:hover,
+.sort-by-type:hover,
+.sort-by-popul:hover,
+.sort-by-price:focus,
+.sort-by-type:focus,
+.sort-by-popul:focus {
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-by-price:active,
+.sort-by-type:active,
+.sort-by-popul:active {
+	color: #000000;
+}
+
+.sort-up-down a {
+	opacity: 1;
+}
+.sort-up-down a:last-child {opacity: 0.6}
+
+.sort-up-down a:hover,
+.sort-up-down a:focus {
+	opacity: 0.6;
+}
+
+.sort-up-down a:active {
+	opacity: 1;
+}
+
+/************************** Конец строки-заголовка Фильтр и Сортировка ***************/
+
+
+
+
+/************************** Основное содержимое страницы каталога *****************************/
+
+.container-filter-sort {				/* Все, что ниже строки Фильтр и Сортировка до подвала */
+	display: flex;
+	height: 1210px;
+}
+
+.left-and-right-content {		/* Содержимое всего контента */
+	display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1165px;
+    background: #ffffff;
+}
+
+.left-string {				/* Левая часть строки, пустая,  без контента */
+  background-color: #efefef;
+  flex-grow: 1;
+}
+
+.right-string {				/* Правая часть строки, пустая, без контента */
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+
+.left-and-right-content {
+	display: flex;
+}
+
+.form-filter {				/* Левая колонка - фильтры */
+	display: flex;
+    width: 270px;
+    background-color: #efefef;
+    padding-left: 60px;
+}
+
+.filter fieldset {			/* Убираем рамку в блоке формы */
+	border: none;
+}
+
+.filter legend {			/* Убираем название блока в fieldset'e */
+	display: none;
+}
+
+.black-border {				/* Черная полоса сверху заголовков фильтров */
+	width: 200px;
+	height: 2px;
+	background-color: #000000;
+	margin-left: -15px;
+}
+
+.font-and-black-line {		/* Заголовки фильтров */
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	margin-left: -15px;
+	font-family: Gilroy, Arial, serif;
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 0.01em;
+	color: #000000;
+}
+
+.scale {				/* Весь ползунок стоимости */
+	width: 200px;
+	height: 2px;
+	background-color: #dbdbdb;
+	margin-left: -5px;
+}
+
+.bar {					/* Зеленая часть ползунка */
+	margin-left: 0px;
+	width: 100px;
+	height: 2px;
+	background-color: #91c92f;
+}
+
+.toggle {			/* Общие свойства для ползунков */
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/svg/filter-button.svg);
+	cursor: pointer;
+}
+
+.toggle-and-price-min {		/* Левый ползунок с подписью */
+	margin-top: -11px;
+	margin-left: -15px;
+}
+
+.price-from,
+.price-to {		/* Надпись "от" */
+	font-family: Gilroy, Arial, serif;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.min-price,
+.max-price {
+	width: 35px;
+	border: none;
+	background-color: #eeeeee;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.toggle-and-price-max {		/* Правый ползунок с подписью */
+	margin-top :-51px;
+	margin-left: 85px;
+}
+
+.price-to {
+	margin-left: -20px;
+}
+
+					/************Цвет************/
+
+.filter-checkbox {				/* Блок с выбором цветов */
+	padding: 0px;
+	margin-top: -10px;
+	margin-left: -15px;
+}
+
+.font-filter-color {			/* Слова Черный, Белый и т. д., Есть, Нет*/
+	color: #000000;
+    margin-left: 50px;
+}
+
+.filter-option label {			/* Свойства чекбосов (с подписью) исходные */
+    width: 100px;
+    height: 25px;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.filter-option label:hover {
+	opacity: 0.6;
+}
+
+.filter-option label:active {
+	opacity: 1;
+}
+
+.filter-option input[type="checkbox"] + .checkbox-switch {		/* Свойства невыбранного чекбокса */
+    position: absolute;
+    left: 0; top: 5px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/svg/checkbox-off.svg) no-repeat;
+    cursor: pointer;
+}
+
+.filter-option input[type="checkbox"]:checked + .checkbox-switch {	/* Свойства выбранного чекбокса */
+    background-image: url(../img/svg/checkbox-on.svg);
+}
+
+
+					/***********Bluetooth***********/
+
+.filter-radio {							/* Блок с выбором наличия bluetooth */
+	padding: 0px;
+	margin-top: -10px;
+	margin-left: -15px;
+}
+
+.filter-option-radio label {			/* Свойства радиокнопок (с подписью) исходные */	
+    width: 100px;
+    height: 25px;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+.filter-option-radio label:hover {
+	opacity: 0.6;
+}
+.filter-option-radio label:active {
+	opacity: 1;
+}
+.filter-option-radio input[type="radio"] + .radio-switch {		/* Радиокнопка не выбрана */
+    position: absolute;
+    left: 0; top: 3px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/svg/radio-off.svg) no-repeat;
+    cursor: pointer;
+}
+.filter-option-radio input[type="radio"]:checked + .radio-switch {	/* Радикнопка выбрана */
+    background-image: url(../img/svg/radio-on.svg);
+}
+
+
+
+
+				/*********** Фотографии **********/
+
+.catalog {				/* Блок правой колонки с фотографиями и нижней строкой пагинации*/
+    display: block;
+    width: 925px;
+}
+
+.catalog-list {			/* Блок фотографий */
+	display: flex;
+	justify-content: space-between;
+	margin-left: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+
+.catalog-item:nth-child(odd) {	/* Для нечетных фотографий */
+	margin-left: 70px;
+}
+
+.annotation-and-price {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+
+
+
+.pagination-list {				/* Строка пагинации */
+	display: flex;
+	justify-content: space-between;
+	margin-left: 70px;
+}
+
+.pages-pagination {				/* Номера страниц в пагинации */
+	display: flex;
+	margin: 0;
+	padding: 0;
+}

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
   </head>
   
   <body>
@@ -26,7 +26,7 @@
                     <label for="search">
                       <span class="visually-hidden">Поиск по сайту</span>
                     </label>
-                    <input class="search-border" type="text" id="search" name="search" value="Поиск по сайту">
+                    <input class="search-border" type="text" id="search" name="search" placeholder="Поиск по сайту">
                     <input class="button-search" type="submit" value="Найти">
                   </div>
                 </div>
@@ -86,19 +86,17 @@
     <main class="main-container">
       <div class="slides-container">
         <h1 class="visually-hidden">Реклама большого монопода</h1>
-        <div class="controlls">
           <label for="slider-one"><span class="visually-hidden">Переключатель для первого слайда</span></label>
-          <input class="visually-hidden0 slider-input slider-input-radio" type="radio" name="slider-group" value="first" id="slider-one" checked>
+          <input class="slider-input slider-input-radio radio-left" type="radio" name="slider-group" value="first" id="slider-one" checked>
           <label for="slider-second"><span class="visually-hidden">Переключатель для второго слайда</span></label>
-          <input class="visually-hidden0 slider-input slider-input-radio x" type="radio" name="slider-group" value="second" id="slider-second">
+          <input class="slider-input slider-input-radio radio-middle" type="radio" name="slider-group" value="second" id="slider-second">
           <label for="slider-third"><span class="visually-hidden">Переключатель для третьего слайда</span></label>
-          <input class="visually-hidden0 slider-input slider-input-radio" type="radio" name="slider-group" value="third" id="slider-third">
-        </div>
+          <input class="slider-input slider-input-radio radio-right" type="radio" name="slider-group" value="third" id="slider-third">
       
         <article class="sliders">
           <h2 class="visually-hidden">Блок для слайдов</h2>
         <!-- SLIDE-1 -->
-          <section class="slide-1">
+          <section class="slides slide-1">
             <div class="big-advirt-photo">
               <h2 class="visually-hidden">Слайд с длинной селфи-палкой</h2>
               <img src="img/big_monopod.png" width="384" height="486" alt="Фото большого монопода">
@@ -109,7 +107,7 @@
                 <span class="null-one">01</span>
               </div>
               <p class="font-ben-stiller">Делай селфи,<br>как Бен Стиллер!</p>
-              <p class="font-for-annotation p">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <p class="font-for-annotation p">Самая длинная палка для селфи доступна в нашем магазине. Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a href="#">
                   <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
                 </a>
@@ -130,7 +128,7 @@
 
 
           <!-- SLIDE-2 -->
-          <section class="slide-2">
+          <section class="slides slide-2">
             <div class="big-advirt-photo">
               <h2 class="visually-hidden">Слайд с умными часами</h2>
               <img src="img/big_clever-watch.png" width="345" height="485" alt="Фото умных часов">
@@ -141,7 +139,7 @@
                 <span class="null-one">02</span>
               </div>
               <p class="font-ben-stiller">Худеем<br>правильно!</p>
-              <p class="font-for-annotation p">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
+              <p class="font-for-annotation p">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <a href="#">
                 <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
               </a>
@@ -161,7 +159,7 @@
           </section>
 
           <!-- SLIDE-3 -->
-          <section class="slide-3">
+          <section class="slides slide-3">
             <div class="big-advirt-photo">
               <h2 class="visually-hidden">Слайд с квадрокоптером</h2>
               <img src="img/big_quadrocopter.png" width="526" height="334" alt="Фото квадрокоптера">
@@ -172,7 +170,7 @@
                 <span class="null-one">03</span>
               </div>
               <p class="font-ben-stiller">Порхает как бабочка,<br>жалит, как пчела!</p>
-              <p class="font-for-annotation p">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замоскированным под стандартную камеру</p>
+              <p class="font-for-annotation p">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
               <a href="#">
                 <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
               </a>
@@ -264,7 +262,7 @@
               </li> 
             </ul>
           </section>
-          <section class="vertical-black-line"></section>
+          <div class="vertical-black-line"></div>
           <aside class="delivery-and-warranty-slides">
             <div class="delivery-warranty-credit-annotation slide-delivery">
               <div class="annotation">
@@ -340,39 +338,7 @@
                 <img class="href-big-foto" src="img/map_image.jpg" width="585" height="222" alt="Изображение карты">
               </a>
             </div>
-            <!-- Модальное окно "Write us" -->
-            <div class="visually-hidden write-us">
-              <div class="exit-write-us">
-                <a href="index.html">
-                  <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из окна Напишите нам">
-                </a>
-              </div>
-              <form action="#" method="post">
-                <div class="write-us-your-name">
-                  <label for="your-name">
-                  Ваше имя:
-                  </label><br>
-                  <input type="text" name="your-name" id="your-name" value="Представьтесь, пожалуйста">
-                </div>
-                <div class="write-us-your-email">
-                  <label>
-                    Ваш e-mail:
-                  </label><br>
-                  <input type="email" name="your-email" id="your-email" value="Для отправки ответа">
-                </div>
-                <div class="write-us-your-message">
-                  <label for="your-message">
-                    Текст письма:
-                  </label><br>
-                  <textarea id="your-message" name="your-message" rows="5" cols="50">
-                    В свободной форме                  
-                  </textarea>
-                </div>
-                <div class="buttons">
-                    <input type="submit" value="Отправить">
-                </div>
-              </form>
-            </div>
+  
           </aside>
         </article>
         <div class="podrobnee-and-write-us">
@@ -389,12 +355,12 @@
       <div class="footer-content">
         <div class="top-footer-nav">
           <a href="index.html">
-            <span class="footer-logo-bottom">DEVICE<br></span>
+            <span class="footer-logo-bottom">DEVICE</span>
           </a>
           <ul class="login-compare-cart">
             <li>
               <a href="#">
-                <span class="login-link-bottom z">Войти</span>
+                <span class="login-link-bottom">Войти</span>
               </a>
             </li>
             <li>
@@ -414,7 +380,7 @@
           <p class="our-adress">г. Москва, ул. Строителей, 15</p>
           <ul class="delivery-warranty-contacts">
             <li><a href="delivery.html"><span>ДОСТАВКА</span></a></li>
-            <li><a href="warranty.html"><span class="z">ГАРАНТИЯ</span></a></li>
+            <li><a href="warranty.html"><span>ГАРАНТИЯ</span></a></li>
             <li><a href="contacts.html"><span>КОНТАКТЫ</span></a></li>
           </ul>
           <p class="our_number">Тел: +7(495)495-95-95</p>
@@ -446,6 +412,45 @@
         </div>
       </div>
     </footer>
-    
+
+<!--             Форма входа                     -->
+
+
+<!--             Форма обратной связи            -->
+    <div class="form-write-us"> 
+      <div class="write-us">
+        <div class="exit-write-us">
+          <a href="index.html">
+            <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из окна Напишите нам">
+           </a>
+        </div>
+      </div>
+      <form action="#" method="post">
+        <div class="write-us-your-name">
+          <label for="your-name">
+                  Ваше имя:
+          </label><br>
+          <input type="text" name="your-name" id="your-name" value="Представьтесь, пожалуйста">
+        </div>
+        <div class="write-us-your-email">
+          <label>
+                    Ваш e-mail:
+          </label><br>
+          <input type="email" name="your-email" id="your-email" value="Для отправки ответа">
+        </div>
+        <div class="write-us-your-message">
+          <label for="your-message">
+                    Текст письма:
+          </label><br>
+          <textarea id="your-message" name="your-message" rows="5" cols="50">
+                    В свободной форме                  
+          </textarea>
+        </div>
+        <div class="buttons">
+            <input type="submit" value="Отправить">
+        </div>
+      </form>    
+    </div>
+
   </body>
 </html>
