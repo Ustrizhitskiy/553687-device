@@ -197,6 +197,7 @@ header {
 }
 
 .cart {
+	margin-right: 5px;
 }
 .cart::before {
 	content: "";
@@ -243,6 +244,23 @@ header {
 	opacity: 0.3;
 }
 
+.submenu {
+	width: 50%;
+}
+
+.left-services {			/* Доставка Гарантия Контакты */
+	width: 50%;
+	display: inline-flex;
+	justify-content: space-between;
+}
+.delivery {
+	margin-left: 15px;}
+
+.warranty {
+	margin-right: 60px;
+}
+
+
 .submenu .types {				
 	display: none;
 }
@@ -254,13 +272,19 @@ header {
 
 .types {
 	display: flex;
-	padding-left: 0px;
+	padding-left: 60px;
 }
 
 .types {					/* Размер блока выпадающего списка */
-	width: 1045px;
-	height: 152px;
+	width: 1165px;
+	height: 130px;
 	background-color: #f7e296;
+	margin-left: -60px;
+	margin-top: 22px;
+}
+
+.row-first {
+	margin-left: 60px;
 }
 
 .types-row:not(:last-child) {
@@ -274,19 +298,6 @@ header {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.delivery {
-	position: absolute;
-	margin-left: -510px;}
-
-.warranty {
-	position: absolute;
-	margin-left: -350px;
-}
-
-.contacts {
-	position: absolute;
-	margin-left: -117px;
-}  
 
 /*-------------------- Конец хедера  ----------------------------*/
 
@@ -555,7 +566,7 @@ header {
 	width: 100%;
 	background-image: url(../img/black_service.png);
 	background-repeat: repeat;
-	color: rgba(240, 197, 46, 0.5);
+	color: #f7e184;
 }
 
 .service-button:hover,
@@ -568,7 +579,7 @@ header {
 	width: 100%;
 	background-image: url(../img/black_service.png);
 	background-repeat: repeat;
-	color: rgba(240, 197, 46, 0.5);
+	color: #f7e184;
 }
 
 .delivery-and-warranty-controlls ul {	/* Убираем отступы у списка */
@@ -914,8 +925,20 @@ footer {
 
 
 
-
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
 /************************************* Стилизация страницы каталога ***************/
+
+.main-header-monopods {		/* Худер */
+	width: 1165px;
+	height: 185px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+    background: rgba(240, 197, 46, 0.5);
+}
 
 .user-icon {color: black;}
 .user-icon::before {
@@ -1328,8 +1351,8 @@ ul.breadcrumbs a:active {
     background-image: url(../img/svg/radio-on.svg);
 }
 
-.filter-button {
-	margin-top: 20px;
+.show-button {				/* Кнопка ОТПРАВИТЬ */
+	margin-left: 30px;
 }
 
 
@@ -1430,6 +1453,11 @@ ul.breadcrumbs a:active {
 	border: 2px solid black;
 	z-index: 10;
 	background-color: #ffffff;
+	box-shadow: 
+		80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 50px;
 }
 
 .exit-write-us {		/* Кнопка закрытия окна */
@@ -1438,6 +1466,13 @@ ul.breadcrumbs a:active {
 	left: 833px;
 	width: 55px;
 	height: 55px;
+	opacity: 0.5;
+}
+.exit-write-us:hover {
+	opacity: 1;
+}
+.exit-write-us:active {
+	opacity: 0.3;
 }
 
 .name-and-email {		/* Контейнер с полями для ввода имени и почты */
@@ -1470,6 +1505,14 @@ ul.breadcrumbs a:active {
 	color: rgba(0, 0, 0, 0.4);
 	padding-left: 20px;
 }
+.box-input:hover {
+	background-color: #eaeaea;
+}
+.box-input:focus {
+	background-color: transparent;
+	border: 2px solid #f7e296;
+	box-sizing: border-box;
+}
 
 .write-us-your-message { 
 	margin-top: 50px;
@@ -1479,10 +1522,20 @@ ul.breadcrumbs a:active {
 }
 
 .input-your-message {		/* Поле ввода сообщения */
-	width: 710px;
+	width: 706px;
 	height: 155px;
 	background-color: #f2f2f2;
 	border: none;
+}
+.input-your-message:hover {
+	background-color: #eaeaea;
+}
+.input-your-message:focus {
+	background-color: transparent;
+	border: 2px solid #f7e296;
+	width: 710px;
+	height: 159px;
+	box-sizing: border-box;
 }
 
 .send-button {				/* Сама кнопка Отправить */
@@ -1492,6 +1545,25 @@ ul.breadcrumbs a:active {
 	border: none;
 	background-color: transparent;
 }
+.send-button::before {		/* Желтая полоса в покое */
+	content: "";
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 7px;
+	margin-left: -40px;
+	margin-top: 6px;
+	background-color: #f0c52e;
+	z-index: 1;
+}
+.send-button:hover::before {
+	height: 30px;
+	margin-top: -6px;
+	background-color: #f0c52e;
+}
+.send-button:active {
+	color: rgba(0, 0, 0, 0.3);
+}
 
 .send {						/* Надпись Отправить на кнопке */
 	font-family: Gilroy, Arial, serif;
@@ -1499,4 +1571,11 @@ ul.breadcrumbs a:active {
 	font-weight: bold;
 	letter-spacing: 0.2em;
 	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	margin-left: -12px;
+}
+
+.show-button {
+	margin-left: 30px;
 }
