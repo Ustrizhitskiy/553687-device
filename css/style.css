@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Gilroy; /* Гарнитура шрифта */
+    font-family: Gilroybold; /* Гарнитура шрифта */
     src: url(../fonts/gilroyextrabold.woff2); /* Путь к файлу со шрифтом */
    }
 
@@ -12,6 +12,13 @@ html {
 	width: 1440px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.qw {
+	z-index: 500000;
+	position: absolute;
+	opacity: 0.8;
+	margin: -39px 0 0 0;
 }
 
 body {
@@ -67,9 +74,14 @@ header {
 
 .header-content {
 	width: 1045px;
-	height: 300px;
+	height: 274px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 25px;
+}
+
+.sign-compare-cart {
+	padding-top: 24px;
 }
 
 .sign-compare-cart ul,
@@ -78,11 +90,12 @@ header {
 }
 
 .header-logo-top {			/* Верхний логотип */
-	position: relative;
-	margin-top: -15px;
+	position: absolute;
+	margin-top: -40px;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 48px;
+	letter-spacing: 0.01em;
 	color: #000000;
-	font-weight: bold;
 }
 
 .header-logo-top:hover,
@@ -103,8 +116,8 @@ header {
 .site-search, 
 .site-search2 {  		/*Ширины флекс-контейнеров */
 	width: 522px;
-	height: 45px;
-	margin-top: -25px;
+	height: 46px;
+	margin-top: -21px;
 }
 .site-search2 {
 	padding-left: 30px;
@@ -124,12 +137,14 @@ header {
 	height: 16px;
 	width: 16px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 15px;
+	margin-left: -8px;
 }
 .search-border {			/* Убираем рамку в поле поиска и делаем фон как у хедера */
 	background-color: transparent;
 	border: transparent;
 	color: rgba(0, 0, 0, 0.5);
+	padding-top: -5px;
 }
 .search-by-site:hover .search-border {		/* При наведении на форму появляется рамка */
 	color: rgba(0, 0, 0, 0.6);
@@ -161,19 +176,17 @@ header {
 	background-color: #000000;
 }
 
-.site-search2 a:hover,			/* Покой-наведение-нажатие верхнего меню хедера */
-.site-search2 a:focus {
-	color: rgba(0, 0, 0, 0.6);
-	opacity: 0.6;
+.site-search2 {
+	display: flex;
+	justify-content: space-between;
 }
-.site-search2 a:active {
-	color: rgba(0, 0, 0, 0.3);
-	opacity: 0.3;
+.searh-site-login span {
+	letter-spacing: 0.02em;
 }
-
-
-.login-link-top {
-	margin-right: 220px;
+.searh-site-login button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 .login-link-top::before {		/* Войти */
 	content: "";
@@ -181,11 +194,11 @@ header {
 	height: 12px;
 	width: 13px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 11px;
 }
 
 .compare {
-	margin-right: 35px;
+	margin-right: 36px;
 }
 .compare::before {
 	content: "";
@@ -193,11 +206,11 @@ header {
 	height: 10px;
 	width: 10px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 9px;
 }
 
 .cart {
-	margin-right: 5px;
+	margin-right: 2px;
 }
 .cart::before {
 	content: "";
@@ -206,6 +219,15 @@ header {
 	width: 12px;
 	display: inline-block;
 	margin-right: 10px;
+}
+
+.site-search2 span:hover {
+	opacity: 0.6;
+}
+
+.site-search2 span:focus,
+.site-search2 span:active {
+	opacity: 0.3;
 }
 
 .site-navigation {				/*Средняя строка меню хедера */
@@ -218,7 +240,7 @@ header {
 }
 
 .gilroy-font-header {			/* Задание свойств для второй строки меню хедера */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.2em;
@@ -254,10 +276,10 @@ header {
 	justify-content: space-between;
 }
 .delivery {
-	margin-left: 15px;}
+	margin-left: 20px;}
 
 .warranty {
-	margin-right: 60px;
+	margin-right: 75px;
 }
 
 
@@ -277,7 +299,7 @@ header {
 
 .types {					/* Размер блока выпадающего списка */
 	width: 1165px;
-	height: 130px;
+	height: 138px;
 	background-color: #f7e296;
 	margin-left: -60px;
 	margin-top: 22px;
@@ -305,7 +327,7 @@ header {
 /*-------------------- Слайды: контроллы и слайды ------------------*/
 
 .slides-container {				/* Сдвиг всего содержимого блока слайдеров на хедер */
-	margin-top: -125px;
+	margin-top: -119px;
 }
 
 .slides-container {
@@ -330,6 +352,7 @@ header {
 .big-advirt-photo {			/* Блок с большой рекламной фотографией  */
 	display: flex;
 	justify-content: space-around;
+	margin-right: 0px;
 }
 
 .short-white-line-null-one {
@@ -349,41 +372,61 @@ header {
 	height: 500px;
 	display: flex;
 	align-items: center;
+	padding-right: 0px;
 }
 
-.slide-3 .big-advirt-photo {		/* Для квадрокоптера, чтобы винт торчал за контент */
+.big-advirt-photo img:nth-of-type(1), 
+.big-advirt-photo img:nth-of-type(2) {
+	padding-right: 83px;
+}
+
+.slide-3 .big-advirt-photo {		/* Для квадрокоптера, чтобы винт торчал за блок контента */
 	width: 620px;
-	margin-left: -70px;
+	margin-left: -30px;
 }
 
 .short-white-line {			/* Короткая белая полоса в слайде */
 	width: 100px;
 	height: 6px;
-	margin-top: 50px;
+	margin-top: 45px;
+	margin-left: 3px;
 	background-color: #ffffff;
 }
 
 .null-one {					/* Большая цифра-номер слайда */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	color: #ffffff;
 	font-size: 179px;
+	margin-top: 68px;
+	margin-right: -7px;
+	margin-bottom: -10px;
+}
+.ben-stiller:nth-child(2) {
+	margin-left: 10px;
+}
+
+.big-advirt-photo-slide-3 {
+	margin-right: -50px;
 }
 
 .font-ben-stiller {			/* Жирная надпись "Делай селфи, как..."  */
-	font-family: Gilroy, Arial, serif;
-	font-weight: bold;
-	line-height: 50px;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 47px;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.015em;
 	line-height: 55px;
 	color: #000000;
 	margin-top: 0;			/*Для наезда на блок 01 */
 }
 
+.font-for-annotation {
+	font-family: OpenSans, Arial, serif;
+	letter-spacing: 0.01em;
+}
+
 .annotation1 {						/* Отступ от "Делай селфи" и ПОДРОБНЕЕ" */
-	margin-bottom: 45px;
-	margin-top: -35px;
+	margin-bottom: 48px;
+	margin-top: -28px;
 	margin-right: 20px;
 }
 
@@ -394,7 +437,7 @@ header {
 	background-image: url(../img/yellow_thin.png);
 	background-repeat: no-repeat;
 	background-position-y: center;
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 18px;
 	letter-spacing: 0.2em;
@@ -409,7 +452,7 @@ header {
 }
 
 .ben-stiller-table {
-	margin-top: 55px;
+	margin-top: 58px;
 }
 
 .up-tr-ben-stiller-table {		/* Верхняя строка таблицы характеристик товара в слайде */
@@ -421,27 +464,30 @@ header {
 }
 
 .ben-stiller-table td {			/* Отступы столбцов в таблице слайда */
-	padding-right: 60px;
+	padding-right: 72px;
+	padding-bottom: 5px;
 }
-
+.down-tr-ben-stiller-table {
+	font-size: 13px;
+}
 .radio-left {				/*   Задаем позиционирование контроллов-кружков */
 	position: absolute;
-	margin-top: 330px;
-	margin-left: 945px;
+	margin-top: 333px;
+	margin-left: 942px;
 	z-index: 3;
 }
 
 .radio-middle {
 	position: absolute;
-	margin-top: 330px;
-	margin-left: 980px;
+	margin-top: 333px;
+	margin-left: 975px;
 	z-index: 3;
 }
 
 .radio-right {
 	position: absolute;
-	margin-top: 330px;
-	margin-left: 1015px;
+	margin-top: 333px;
+	margin-left: 1008px;
 	z-index: 3;
 }
 
@@ -473,7 +519,8 @@ header {
 	width: 1165px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 90px;
+	margin-top: 99px;
+	margin-bottom: 172px;
 }
 
 .box-categories ul {			/* Убираем отступ у ul */
@@ -494,7 +541,7 @@ header {
 	justify-content: space-around;
 }
 
-.down {							/* Для вторй иконки */
+.down {							/* Для второй иконки */
 	align-self: flex-end;
 }
 
@@ -510,11 +557,10 @@ header {
 .categories-icons li {width: 160px;}
 
 .categories-icon-sign {		/* Подписи к иконкам  */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 18px;
 	letter-spacing: 0.01em;
-	line-height: 100%;
 	color: black;
 }
 .categories-icon-sign:active {
@@ -532,7 +578,7 @@ header {
 
 .del-war-cred {				/* Блок с контентом  */
 	width: 1165px;	
-	height: 270px;
+	height: 290px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -540,34 +586,40 @@ header {
 }
 
 .services {					/* Шрифт левой колонки раздела */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.2em;
-	line-height: 2.5em;
+	line-height: 2.61em;
 	color: #000000;
 }
 
 .vertical-black-line {		/* Черная вертикальная линия */
 	width: 8px;
-	height: 300px;
+	height: 319px;
 	background: #000000;
-	margin-top: -10px;
+	margin-top: -35px;
 }
 
 .service-button {
-	width: 150px;
+	width: 170px;
 	background-image: url(../img/yellow_thin.png);
 	background-repeat: no-repeat;
-	background-position-y: center;
+	background-position: 0, center;
 }
 
-.services li:nth-child(1) p {		/* Положение черного фона на ДОСТАВКЕ по умолчанию */
-	width: 100%;
-	background-image: url(../img/black_service.png);
-	background-repeat: repeat;
-	color: #f7e184;
+.delivery-button {
+	padding-left: 22px;
 }
+
+.warranty-button {
+	padding-left: 25px;
+}
+
+.credit-button {
+	padding-left: 40px;
+}
+
 
 .service-button:hover,
 .service-button:focus {
@@ -591,26 +643,35 @@ header {
 }
 
 .delivery-and-warranty-controlls {
-	width: 275px;
-	border: 1px solid black;
+	width: 279px;
 }
-.delivery-and-warranty-slides {			
-	width: 880px;
-	border: 1px solid black;
+.delivery-and-warranty-slides {		
+
+	width: 877px;
 }
 
 .slide-header {							/* Названия слайдов */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 47px;
 	font-weight: bold;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.02em;
 	color: #000000;
+	margin-bottom: 40px;
 }
 
 .delivery-warranty-credit-annotation {  /* Правая колонка с описанием */
+	position: absolute;
 	display: flex;
 	justify-content: space-around;
-	margin-left: 50px;
+	margin-left: 115px;
+	margin-right: 68px;
+}
+
+.font-for-annotation2 {
+	font-family: OpenSans, Arial, serif;
+	font-size: 15px;
+	letter-spacing: 0.017em;
+	margin-right: 100px;
 }
 
 .size-of-item {
@@ -626,27 +687,32 @@ header {
 }
 
 
-.delivery-and-warranty-slides > div:not(:first-child) {			/* Скрываем два других слайда, кроме доставки */
+/*.delivery-and-warranty-slides > div:not(:first-child) {			/* Скрываем два других слайда, кроме доставки 
 	display: none;
-}
+	position: absolute;
+}*/
 
 
 /*------------------------- Бренды -----------------------------------*/
 
 .box-our-brands {
-	width: 1165px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 1173px;
+	margin-left: 125px;
+	margin-right: 0;
+	margin-top: 92px;
 }
 
 .box-our-brands ul {
 	padding: 0;
 }
 
-.our-brands {
-	display: flex;
-	justify-content: space-around;
+.our-brands li {
+	display: inline-block;
 }
+.our-brands li:nth-child(1) {margin-left: 16px;}
+.our-brands li:nth-child(2) {margin-left: 35px;}
+.our-brands li:nth-child(3) {margin-left: 35px;}
+.our-brands li:nth-child(4) {margin-left: 33px;}
 
 .brands-icon {
 	-webkit-filter: sepia(100%);
@@ -668,8 +734,10 @@ header {
 	width: 1165px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 84px;
 	display: flex;
 	justify-content: space-around;
+	padding-left: 3px;
 }
 
 .short-black-line {
@@ -679,46 +747,87 @@ header {
 }
 
 .sign-about {								/* Загогловки разделов */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 47px;
 	letter-spacing: 0.01em;
 	color: #000000;
+	padding-top: 6px;
+	margin-bottom: 53px;
+}
+
+.about-us p {
+	padding-right: 105px;
+	padding-bottom: 15px;
+	font-weight: 15px;
+	letter-spacing: 0em;
+}
+
+.about-us p:nth-child(4) {
+	display: block;
+	margin-bottom: 25px;
 }
 
 .transport-companys {				/* Транспортные компании */
-	list-style: circle;
-	padding-left: 20px;
-	font-family: Gilroy, Arial, serif;
+	margin-bottom: 39px;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
-	line-height: 35px;
+	line-height: 40px;
+	letter-spacing: 0.05em;
 	color: #000000;
 	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-left: 0px;
+}
+
+.your-transport-company:before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/svg/circle-marker.svg);
+	margin-right: 20px;
+	margin-left: -3px;
+	opacity: 0.5;
+}
+
+.map-and-text {		/* Блок с контактами и картой */
+	padding-right: 5px;
+}
+
+.map {
+	padding-top: 22px;
 }
 
 .podrobnee-and-write-us {		/* Подписи "ПОДРОБНЕЕ О НАС" и "НПИШИТЕ НАМ" */
 	width: 1165px;
 	margin: 20px auto 60px auto;
-	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
 	
+}
+.block-write-us {
+	width: 582px;
 }
 
 .wirte1, .wirte2 {
-	padding: 5px 30px 5px 30px;
 	background-image: url(../img/yellow_thin.png);
 	background-repeat: repeat-x;
-	background-position-y: center;
-	font-family: Gilroy, Arial, serif;
+	background-position: 0, center;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 18px;
 	letter-spacing: 0.2em;
 }
 
+.wirte1 {
+	padding-left: 25px;
+	padding-right: 20px;
+}
+
 .wirte2 {
-	margin-left: 295px;
-	padding: 5px 30px 5px 30px;
+	margin-left: 18px;
+	padding-left: 42px;
+	padding-right: 37px;
 }
 
 .yellow-line:hover,
@@ -729,19 +838,22 @@ header {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-
-
+.box-map-and-contacts {
+	margin-bottom: 120px;
+}
 /*---------------------------- Футер -------------------------------------------*/
 footer {
 	background-color: #464646;
+	margin-top: -33px;
 	padding-top: 60px;
-	height: 250px;
+	height: 265px;
 }
 
 .footer-content {					/* Три блока футера */
 	width: 1165px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 4px;
 	display: flex;
 	flex-direction: column;
 	color: #ffffff;
@@ -755,14 +867,20 @@ footer {
 .login-compare-cart {			/* Свойства верхней строки футера */
 	display: flex;
 	justify-content: space-between;
-	width: 30%;
+	width: 28%;
 	margin: 0;
 }
 
 .footer-logo-bottom {
+	position: relative;
+	display: block;
+	margin-top: 5px;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 48px;
 	font-weight: bold;
 	color: #ffc600;
+	position: relative;
+	
 }
 .footer-logo-bottom:hover,
 .footer-logo-bottom:focus {
@@ -772,6 +890,11 @@ footer {
 	color: rgba(255, 198, 0, 0.3);
 }
 
+.login-compare-cart button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
 .login-compare-cart span {				/* Войти в футере */
 	color: rgba(255, 255, 255, 0.6);
 }
@@ -815,7 +938,7 @@ footer {
 	height: 12px;
 	width: 12px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 9px;
 }
 .cart-bottom:hover::before {
 	opacity: 0.6;
@@ -826,24 +949,31 @@ footer {
 }
 
 .middle-footer-nav {			/* Вторая строка из трех блоков */
+	margin-top: 16px;
 	display: flex;
 	justify-content: space-between;
+}
+
+.our-adress,
+.our-number {
+	width: 250px;
 }
 
 .delivery-warranty-contacts {	/* Средний блок второй строки */
-	display: flex;
-	justify-content: space-between;
-	width: 30%;
-	margin-right: 150px;
+	width: 450px;
+	display: inline-flex;
+	margin-right: 100px;
+	margin-top: 18px;
 }
-
-.delivery-warranty-contacts li:nth-child(2){
-	padding-left: 40px;
-	padding-right: 40px;
+.delivery-footer {
+	margin-left: 14px;
 }
-
+.warranty-footer {
+	margin-left: 34px;
+	margin-right: 33px;
+}
 .delivery-warranty-contacts span {
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size:  18px;
 	letter-spacing: 0.2em;
@@ -861,13 +991,15 @@ footer {
 .bottom-footer-nav {			/*Нижняя строка футера из трех блоков  */
 	display: flex;
 	justify-content: space-between;
+	margin-top: 30px;
 }
 
 .short-yellow-line {
-	width: 60px;
-	height: 8px;
-	margin-top: 25px;
+	width: 80px;
+	height: 7px;
+	margin-top: 29px;
 	background-color: #ffc600;
+	margin-left: 2px;
 }
 
 .bottom-footer-nav ul {  		/* Убираем отступы для списка соцсетей  */
@@ -877,12 +1009,12 @@ footer {
 .social-networks {
 	display: flex;
 	justify-content: space-between;
-	margin-right: 40px;
+	margin-right: 52px;
 }
 
 .social-networks li:nth-child(2) {
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 23px;
+	padding-right: 23px;
 }
 
 .social-networks li {
@@ -902,6 +1034,7 @@ footer {
 
 .html-icon {
 	opacity: 1;	
+	margin-right: 3px;
 }
 .html-icon:hover,
 .html-icon:focus {
@@ -913,14 +1046,6 @@ footer {
 
 /*---------------------------- Конец футера --------------------------------------*/
 
-.href-big-foto:active {		
-	background-image: url("../img/map-big.jpg");
-	left: 221px;
-	bottom: 100px;
-	width: 999px;
-	height: 398px;
-	box-shadow: -2px 15px 20px 5px rgba(4, 6, 6, 0.2);
-}
 
 
 
@@ -931,7 +1056,7 @@ footer {
 /**********************************************************************************/
 /************************************* Стилизация страницы каталога ***************/
 
-.main-header-monopods {		/* Худер */
+.main-header-monopods {		/* Хедер */
 	width: 1165px;
 	height: 185px;
 	margin-left: auto;
@@ -1001,11 +1126,10 @@ footer {
 	width: 1045px;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: Gilroy, Arial, serif; 
+	font-family: Gilroybold, Arial, serif; 
 	font-size: 47px;
 	letter-spacing: 0.01em;
-	font-weight: bold;
-
+	color: #000000;
 }
 
 .breadcrumbs,
@@ -1105,7 +1229,7 @@ ul.breadcrumbs a:active {
 }
 
 .filter-title-font {
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 16px;
 	letter-spacing: 0.2em;
@@ -1213,7 +1337,7 @@ ul.breadcrumbs a:active {
 	margin-bottom: 32px;
 	margin-top: 7px;
 	margin-left: -15px;
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 18px;
 	letter-spacing: 0.01em;
@@ -1388,7 +1512,7 @@ ul.breadcrumbs a:active {
 
 .catalog-item-title {			/* Подписи к изображениям селфи-палок */
 	width: 250px;
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.01em;
@@ -1431,7 +1555,7 @@ ul.breadcrumbs a:active {
 .back,
 .forward,
 .pages-pagination {
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 16px;
 	font-weight: bold;
 	letter-spacing: 0.2em;
@@ -1439,18 +1563,33 @@ ul.breadcrumbs a:active {
 }
 
 
+/********************************** Форма обратной связи *************/
 
+ @keyframes bounce {		/* Появление окна формы*/
+  0% {
+    transform: translateY(-2000px);
+  }
 
+  70% {
+    transform: translateY(30px);
+  }
 
- 				/*************** Форма обратной связи *************/
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .form-write-us {		/* Все окно */
-/*	position: fixed;  */
+	display: none;
+	position: fixed;  
 	top: 100px;
 	left: 310px;
 	width: 910px;
 	height: 550px;
-	border: 2px solid black;
 	z-index: 10;
 	background-color: #ffffff;
 	box-shadow: 
@@ -1458,6 +1597,11 @@ ul.breadcrumbs a:active {
 		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
 		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
 	margin-bottom: 50px;
+}
+
+.modal-show {				/* Класс для скрипта для появления модального окна */
+	display: block;
+	animation: bounce 0.6s;
 }
 
 .exit-write-us {		/* Кнопка закрытия окна */
@@ -1486,7 +1630,7 @@ ul.breadcrumbs a:active {
 
 .your-name-sign {		/* Подписи к полям */
 	margin: 0;
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: #000000;
@@ -1566,7 +1710,7 @@ ul.breadcrumbs a:active {
 }
 
 .send {						/* Надпись Отправить на кнопке */
-	font-family: Gilroy, Arial, serif;
+	font-family: Gilroybold, Arial, serif;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.2em;
@@ -1579,3 +1723,82 @@ ul.breadcrumbs a:active {
 .show-button {
 	margin-left: 30px;
 }
+
+.invalid-background {
+	background-color: #f6dada;
+}
+/**********************Конец формы обратной связи*********************/
+
+
+
+/********************************* Google-maps ***********************/
+
+.google-map {			/* Блок с картой */
+	display: none;
+	position: absolute;
+	top: 1900px;
+	left: 290px;
+	width:960px;
+	height: 559px;
+	box-shadow: 
+		80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes appear {		/* Появление окна с картой */
+	0%		{opacity: 0;}
+	30%		{opacity: 0,3;}
+	60%		{opacity: 0.6;}
+	80% 	{opacity: 0.8;}
+	100%	{opacity: 1;}
+}
+
+.map-show {				/* Класс дл подгрузки из JavaScript */
+	display: block;
+	animation-name: appear;
+	animation-duration: 0.4s;
+}
+
+.exit-google-map {
+	position: absolute;
+	top: 40px;
+	left: 890px;
+	width: 55px;
+	height: 55px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.exit-google-map:hover {
+	opacity: 1;
+}
+.exit-google-map:active {
+	opacity: 0.3;
+}
+
+/*************************** Конец описания подгрузки карты ****************************/
+
+
+/*************************** Слайды доставки-гарнатии-кредита **************************/
+.default-unchecked {
+	width: 170px;
+	background-image: url(../img/yellow_thin.png);
+	background-repeat: no-repeat;
+	background-position: 0, center;
+}
+
+.default-checked {		/* Положение черного фона на выбранном элементе */
+	width: 100%;
+	background-image: url(../img/black_service.png);
+	background-repeat: repeat;
+	color: #f7e184;
+}
+
+.services-slide-show {
+	display: flex;
+}
+
+.services-slide-hidden {
+	display: none;
+}
+

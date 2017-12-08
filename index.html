@@ -34,15 +34,19 @@
             </form>
           </li>
           <li class="site-search2">
-            <a href="#">
-              <span class="login-link-top">Войти</span>
-            </a>       
-            <a href="#">
-              <span class="compare">Сравнить</span>
-            </a>
-            <a href="#">
-              <span class="cart">Корзина</span>
-            </a>
+            <div class="searh-site-login">
+              <button>
+                <span class="login-link-top">Войти</span>
+              </button>       
+            </div>
+            <div class="search-site-compare-cart">
+              <a href="#">
+                <span class="compare">Сравнить</span>
+              </a>
+              <a href="#">
+                <span class="cart">Корзина</span>
+              </a>
+            </div>
           </li>
         </ul>
       </nav>
@@ -106,7 +110,8 @@
                 <div class="short-white-line"></div>
                 <span class="null-one">01</span>
               </div>
-              <p class="font-ben-stiller">Делай селфи,<br>как Бен Стиллер!</p>
+              <span class="font-ben-stiller top-ben-stiller">Делай селфи,</span>
+              <p class="font-ben-stiller second-ben-stiller">как Бен Стиллер!</p>
               <p class="font-for-annotation annotation1">Самая длинная палка для селфи доступна в нашем магазине. Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a href="#">
                   <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
@@ -117,7 +122,7 @@
                   <td>5 кг</td>
                   <td>Карбон</td>
                 </tr>
-                <tr>
+                <tr class="down-tr-ben-stiller-table">
                   <td>Длина палки</td>
                   <td>Вес палки</td>
                   <td>Материал</td>
@@ -160,7 +165,7 @@
 
           <!-- SLIDE-3 -->
           <section class="slides slide-3">
-            <div class="big-advirt-photo">
+            <div class="big-advirt-photo big-advirt-photo-slide-3">
               <h2 class="visually-hidden">Слайд с квадрокоптером</h2>
               <img src="img/big_quadrocopter.png" width="526" height="334" alt="Фото квадрокоптера">
             </div>
@@ -253,13 +258,13 @@
             <h3 class="visually-hidden">Услуги</h3>         
             <ul class="services">
               <li>
-                <p class="service-button default-delivery">ДОСТАВКА</p>
+                <p class="service-button service-button-delivery default-checked"><span class="delivery-button">ДОСТАВКА</span></p>
               </li>
               <li>
-                <p class="service-button">ГАРАНТИЯ</p>
+                <p class="service-button service-button-warranty"><span class="warranty-button">ГАРАНТИЯ</span></p>
               </li>
               <li>
-                <p class="service-button">КРЕДИТ</p>
+                <p class="service-button service-button-credit"><span class="credit-button">КРЕДИТ</span></p>
               </li> 
             </ul>
           </section>
@@ -268,27 +273,27 @@
             <div class="delivery-warranty-credit-annotation slide-delivery">
               <div class="annotation">
                 <p class="slide-header">Доставка</p>
-                <p class="font-for-annotation">Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на Ваш этаж.</p>
+                <p class="font-for-annotation2">Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на Ваш этаж.</p>
               </div>
               <div class="size-of-item">
                 <img class="delivery-image" src="img/svg/delivery.svg" width="136" height="164" alt="Бегущий человечек">
               </div>
             </div>
 
-            <div class="delivery-warranty-credit-annotation slide-warranty">
+            <div class="delivery-warranty-credit-annotation slide-warranty services-slide-hidden">
               <div class="annotation">
                 <p class="slide-header">Гарантия</p>
-                <p class="font-for-annotation">Если из-за возгорания купленного у нас товара у Вас сгорит дом - не переживайте, мы выдадим Вам новый. Товар, не дом, конечно же.</p>
+                <p class="font-for-annotation2">Если из-за возгорания купленного у нас товара у Вас сгорит дом - не переживайте, мы выдадим Вам новый. Товар, не дом, конечно же.</p>
               </div>
               <div class="size-of-item">
                 <img class="warranty-image" src="img/svg/warranty.svg" width="171" height="194" alt="Телефон и гаечный ключ">
               </div>
             </div>
 
-            <div class="delivery-warranty-credit-annotation slide-credit">
+            <div class="delivery-warranty-credit-annotation slide-credit services-slide-hidden">
               <div class="annotation">
                 <p class="slide-header">Кредит</p>
-                <p class="font-for-annotation">Влезть в долговую яму стало проще! Кредитные констультанты подберут для Вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                <p class="font-for-annotation2">Влезть в долговую яму стало проще! Кредитные констультанты подберут для Вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
               </div>
               <div class="size-of-item">
                 <img class="credit-image" src="img/svg/credit.svg" width="156" height="186" alt="Человек тащит ящик">
@@ -321,7 +326,7 @@
             <h3 class="sign-about">О нас</h3>
             <p class="font-for-annotation">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
             </p>
-            <p class="font-for-annotation">Мы можем доставить Ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+            <p class="font-for-annotation otstup">Мы можем доставить Ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
             </p>
             <ul class="transport-companys">
               <li class="your-transport-company">Деловые линии</li>
@@ -334,19 +339,27 @@
             <h3 class="sign-about">Контакты</h3>
             <p class="font-for-annotation">Вы можете товар забрать сами, заехав в наш офис. Заодно, Вы сможете проверить работоспособность покупки. Всякое бывает.
             </p>
+            <div class="google-map">
+              <div class="exit-google-map">
+                <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из Google-maps">
+              </div>
+
+              <iframe src="https://yandex.ru/map-widget/v1/-/CBaS6Lxh~A" width="960" height="559" frameborder="0"></iframe>
+
+            </div>
             <div class="map">
               <a href="#">
-                <img class="href-big-foto" src="img/map_image.jpg" width="585" height="222" alt="Изображение карты">
+                <img class="href-big-foto" src="img/map_image.jpg" width="560" height="222" alt="Изображение карты">
               </a>
             </div>
   
           </aside>
         </article>
         <div class="podrobnee-and-write-us">
-          <a href="#">
+          <a class="block-write-us" href="#">
             <span class="yellow-line wirte1">ПОДРОБНЕЕ О НАС</span>
           </a>
-          <a href="#">
+          <a class="block-write-us" href="#">
             <span class="yellow-line wirte2">НАПИШИТЕ НАМ</span>
           </a>
         </div>
@@ -360,9 +373,9 @@
           </a>
           <ul class="login-compare-cart">
             <li>
-              <a href="#">
+              <button>
                 <span class="login-link-bottom">Войти</span>
-              </a>
+              </button>
             </li>
             <li>
               <a href="#">
@@ -380,8 +393,8 @@
         <div class="middle-footer-nav">
           <p class="our-adress">г. Москва, ул. Строителей, 15</p>
           <ul class="delivery-warranty-contacts">
-            <li><a href="delivery.html"><span>ДОСТАВКА</span></a></li>
-            <li><a href="warranty.html"><span>ГАРАНТИЯ</span></a></li>
+            <li class="delivery-footer"><a href="delivery.html"><span>ДОСТАВКА</span></a></li>
+            <li class="warranty-footer"><a href="warranty.html"><span>ГАРАНТИЯ</span></a></li>
             <li><a href="contacts.html"><span>КОНТАКТЫ</span></a></li>
           </ul>
           <p class="our_number">Тел: +7(495)495-95-95</p>
@@ -414,35 +427,31 @@
       </div>
     </footer>
 
-<!--             Форма входа                     -->
-
 
 <!--             Форма обратной связи            -->
     <div class="form-write-us"> 
         <div class="exit-write-us">
-          <a href="index.html">
-            <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из окна Напишите нам">
-           </a>
+          <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из окна Напишите нам">
         </div>
       <form action="#" method="post">
         <div class="name-and-email">
           <div class="write-us-your-name">
             <label for="your-name">
-              <p class="your-name-sign">Ваше имя:</p>
+              <span class="your-name-sign">Ваше имя:</span><br>
             </label>
             <input class="box-input" type="text" name="your-name" id="your-name" placeholder="Представьтесь, пожалуйста">
           </div>
 
           <div class="write-us-your-email">
             <label>
-              <p class="your-name-sign">Ваш e-mail:</p>
+              <span class="your-name-sign">Ваш e-mail:</span>
             </label>
             <input class="box-input" type="email" name="your-email" id="your-email" value="Для отправки ответа">
           </div>
         </div>
         <div class="write-us-your-message">
           <label for="your-message">
-            <p class="your-name-sign">Текст письма:</p>
+            <span class="your-name-sign">Текст письма:</span>
           </label>
           <textarea class="input-your-message" id="your-message" name="your-message" rows="5" cols="50"></textarea>
         </div>
@@ -451,6 +460,9 @@
         </button>
       </form>    
     </div>
+
+    <script src="js/script.js">
+    </script>
 
   </body>
 </html>
