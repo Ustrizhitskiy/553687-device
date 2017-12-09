@@ -14,13 +14,6 @@ html {
 	margin-right: auto;
 }
 
-.qw {
-	z-index: 500000;
-	position: absolute;
-	opacity: 0.8;
-	margin: -39px 0 0 0;
-}
-
 body {
 
 	margin: 0;
@@ -53,16 +46,6 @@ header {
 
 header {
 	border: 1px solid #ffffff;		/* При отмене сдвигается логотип */
-}
-
-/*header,*/
-/*.box-categories,*/
-.del-war-cred-box,
-/*.box-our-brands,*/
-/*.about-us-and-contacts,*/
-/*.podrobnee-and-write-us,*/
-/*.box-map-and-contacts */{
-	border: 1px solid red;
 }
 
 .visually-hidden {
@@ -119,6 +102,7 @@ header {
 	height: 46px;
 	margin-top: -21px;
 }
+
 .site-search2 {
 	padding-left: 30px;
 }
@@ -131,6 +115,10 @@ header {
 	display: none;
 }
 
+.search-by-site {
+	margin-top: -5px;
+}
+
 .search-by-site::before {			/* Вставляем значок лупа */
 	content: "";
 	background-image: url("../img/svg/search.svg");
@@ -139,13 +127,17 @@ header {
 	display: inline-block;
 	margin-right: 15px;
 	margin-left: -8px;
+	position: absolute;
+	top: 93px;
 }
 .search-border {			/* Убираем рамку в поле поиска и делаем фон как у хедера */
 	background-color: transparent;
 	border: transparent;
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.3);
 	padding-top: -5px;
+	padding-left: 27px;
 }
+
 .search-by-site:hover .search-border {		/* При наведении на форму появляется рамка */
 	color: rgba(0, 0, 0, 0.6);
 	border-bottom: 2px solid rgb(0, 0, 0);
@@ -162,8 +154,8 @@ header {
 	background-color: transparent;
 	height: 45px;
 	border: 2px solid black;
-	padding-top: 23px;
-	margin-left: -5px;
+	position: absolute;
+	top: 66px;
 }
 .button-search:hover,
 .button-search:focus {
@@ -175,6 +167,12 @@ header {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #000000;
 }
+
+
+
+
+
+
 
 .site-search2 {
 	display: flex;
@@ -1072,11 +1070,13 @@ footer {
 	height: 12px;
 	width: 13px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 12px;
+	margin-left: 5px;
 }
 
 
 .logout-link-top {
+	padding-left: 13px;
 	color: rgba(0, 0, 0, 0.3);
 }
 .logout-link-top:hover,
@@ -1102,7 +1102,7 @@ footer {
 }
 
 .compare-monopods {
-	margin-right: -50px;
+	margin-right: 37px;
 }
 .compare-monopods::before {
 	content: "";
@@ -1116,10 +1116,12 @@ footer {
 
 /*--------------------------- Конец описания хедера ---------------------------*/
 
+/*--------------------------- Основное содержимое ----------------------------*/
 
+.container {				/* main */
+	margin-top: 46px;
+}
 /*--------------------------- Хлебные крошки -------------------------------*/
-
-
 
 .monopods-for-selfy {
 	display: block;
@@ -1128,7 +1130,7 @@ footer {
 	margin-right: auto;
 	font-family: Gilroybold, Arial, serif; 
 	font-size: 47px;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.015em;
 	color: #000000;
 }
 
@@ -1148,7 +1150,8 @@ footer {
 
 ul.breadcrumbs > li {
 	display: inline;
-	margin-right: 20px;
+	margin-right: 13px;
+	letter-spacing: 0;
 }
 
 ul.breadcrumbs a:hover,
@@ -1166,8 +1169,9 @@ ul.breadcrumbs a:active {
 /*-------------------------------- Строка "Фильтр" и "Сортировка" -----------------------*/
 
 .string {				/* целая строка */
+	margin-top: 42px;
 	display: flex;
-	height: 70px;
+	height: 68px;
 }
 
 .fiter-and-sort-title {		/* Содержимое строки */
@@ -1196,18 +1200,22 @@ ul.breadcrumbs a:active {
 .filter-title {				/* Заголовок Фильтр */
 	display: flex;
     width: 270px;
-    height: 70px;
+    height: 68px;
     background-color: #dcdcdc;
     align-items: center;
     padding-left: 60px;
+}
+.filter-span {
+	padding-left: 4px;
 }
 
 .sort-title {				/* Заголовок Сортировка.... */
     display: flex;
     justify-content: space-between;
+    padding-left: 4px;
+    width: 829px;
+    height: 68px;
     align-items: center;
-    width: 825px;
-    height: 70px;
 }
 
 .sort {
@@ -1215,24 +1223,24 @@ ul.breadcrumbs a:active {
 }
 
 .sort span:first-child {	/* Отступ вправо от слова Сортировка */
-	padding-right: 55px;
+	padding-right: 47px;
 }
 
 .sort span:not(:first-child) {             /*  Свойства видов сортировки  */
-    padding-right: 30px;
+    padding-right: 20px;
     font-weight: 14px;
     letter-spacing: 0;
 }
 
 .arrow-up {				/* Отступы между стрелками */
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .filter-title-font {
 	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 16px;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.22em;
 	color: #000000;
 }
 
@@ -1284,7 +1292,7 @@ ul.breadcrumbs a:active {
 
 .container-filter-sort {				/* Все, что ниже строки Фильтр и Сортировка до подвала */
 	display: flex;
-	height: 1210px;
+	height: 1215px;
 }
 
 .left-and-right-content {		/* Содержимое всего контента */
@@ -1311,9 +1319,9 @@ ul.breadcrumbs a:active {
 
 .form-filter {				/* Левая колонка - фильтры */
 	display: flex;
-    width: 270px;
+    width: 267px;
     background-color: #efefef;
-    padding-left: 60px;
+    padding-left: 63px;
     padding-top: 65px;
 }
 
@@ -1354,7 +1362,7 @@ ul.breadcrumbs a:active {
 
 .bar {					/* Зеленая часть ползунка */
 	margin-left: 0px;
-	width: 100px;
+	width: 108px;
 	height: 2px;
 	background-color: #91c92f;
 }
@@ -1367,8 +1375,8 @@ ul.breadcrumbs a:active {
 }
 
 .toggle-and-price-min {		/* Левый ползунок с подписью */
-	margin-top: -11px;
-	margin-left: -15px;
+	margin-top: -13px;
+	margin-left: -19px;
 }
 
 .price-from,
@@ -1387,8 +1395,8 @@ ul.breadcrumbs a:active {
 }
 
 .toggle-and-price-max {		/* Правый ползунок с подписью */
-	margin-top :-51px;
-	margin-left: 85px;
+	margin-top :-49px;
+	margin-left: 93px;
 }
 
 .price-to {
@@ -1409,7 +1417,7 @@ ul.breadcrumbs a:active {
 
 .font-filter-color {			/* Слова Черный, Белый и т. д., Есть, Нет*/
 	color: #000000;
-    margin-left: 50px;
+    margin-left: 39px;
 }
 
 .filter-option label {			/* Свойства чекбосов (с подписью) исходные */
@@ -1448,6 +1456,7 @@ ul.breadcrumbs a:active {
 	padding: 0px;
 	margin-top: -13px;
 	margin-left: -15px;
+	margin-bottom: -2px;
 }
 
 .filter-option-radio label {			/* Свойства радиокнопок (с подписью) исходные */	
@@ -1475,39 +1484,58 @@ ul.breadcrumbs a:active {
     background-image: url(../img/svg/radio-on.svg);
 }
 
-.show-button {				/* Кнопка ОТПРАВИТЬ */
-	margin-left: 30px;
+.show-button {				/* Кнопка ПОКАЗАТЬ */
+	padding-left: 7px;
 }
-
 
 				/*********** Фотографии **********/
 
 .catalog {				/* Блок правой колонки с фотографиями и нижней строкой пагинации*/
     display: block;
-    width: 825px;
+    width: 832px;
 }
 
 .catalog-list {			/* Блок фотографий */
 	display: flex;
 	justify-content: space-between;
-	margin-top: 25px;
+	margin-top: 36px;
 	margin-left: 0;
 	padding: 0;
 	flex-wrap: wrap;
 }
 
 .catalog-item {
-	margin-top: 45px;
+	margin-top: 35px;
 }
 
 .catalog-item:nth-child(odd) {	/* Для нечетных фотографий */
-	margin-left: 70px;
+	margin-left: 72px;
+}
+
+.new-marked {			/* Метка NEW блок */
+	position: absolute; 
+	width: 60px; 
+	height: 60px; 
+	margin-left: 273px;
+	margin-top: 27px;
+	opacity: 0.2;
+}
+.new-sign {				/* Сама надпись NEW */
+	position: absolute;
+	left: 16px;
+	top: 17px;
+	font-family: Gilroybold, Arial, serif;
+	font-size: 14px;
+}
+.catalog-item:not(:nth-of-type(4)) .new-marked {
+	display: none;
 }
 
 .annotation-and-price {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 20px;
+	margin-top: 25px;
+	margin-bottom: 18px;
 }
 
 .catalog-item-title {			/* Подписи к изображениям селфи-палок */
@@ -1516,6 +1544,7 @@ ul.breadcrumbs a:active {
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.01em;
+	line-height: 20px;
 	color: #000000;
 }
 
@@ -1523,33 +1552,109 @@ ul.breadcrumbs a:active {
 	font-family: Gilroy, Arial, serif;
 	font-size: 16px;
 	letter-spacing: 0.01em;
+	line-height: 20px;
 	color: #464646;
 }
 
+.container-for-item-hover {		/* Картинка при наведении на фотографию */
+	display: none;
+	position: absolute;
+	width: 360px;
+	height: 380px;
+	background-color: rgba(238, 238, 238, 0.7);
+}
 
+.catalog-item:hover .container-for-item-hover {
+	display: block;
+}
 
+.add-to-cart-and-compare {		/* Блок с кнопкой В Корзину и Добавить к сравнению */
+	display: block;
+	width: 200px;
+	height: 100px;
+	margin-top: 150px;
+	margin-left: 80px;
+}
 
+.button-add-to-compare {		/* Кнопка добавить к сравнению */
+	display: block;
+	background-color: transparent;
+	border: none;
+	margin-top: 30px;
+}
+.sign-add-to-compare {			/* Сама надпись Добвавить к сравнению */
+	margin-left: 25px;
+	font-family: OpenSans, Arial, serif;
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+.sign-add-to-compare:hover,
+.sign-add-to-compare:focus {
+	color: #000000;
+}
+.sign-add-to-compare:active {
+	color: rgba(0, 0, 0, 0.3);
+}
 
 .pagination-list {				/* Строка пагинации */
 	display: flex;
 	justify-content: space-between;
+	width: 760px;
 	height: 70px;
-	margin-left: 70px;
-	margin-top: 45px;
+	margin-left: 72px;
+	margin-top: 23px;
 	background-color: #ebebeb;
 	align-items: center;
-	padding: 0 30px;
+	padding: 0 0px;
 }
 
 .pages-pagination {				/* Номера страниц в пагинации */
 	display: flex;
 	margin: 0;
-	padding: 0;
+	padding-left: 7px;
 }
 
-.pagination-item {				/* Отступы между номерами страниц в пагинации */
-	padding-left: 20px;
-	padding-right: 20px;
+
+.back,
+.forward {
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 129px;
+	height: 70px;
+	margin: 0;
+}
+.back:hover,
+.forward:hover,
+.back:focus,
+.forward:focus {
+	background-color: #dcdcdc;
+}
+.back:active,
+.forward:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+
+.pagination-item:nth-child(2) {				/* Отступы между номерами страниц в пагинации */
+	padding-left: 28px;
+	padding-right: 28px;
+}
+
+.pagination-item a {
+	color: rgba(0, 0, 0, 0.3);
+}
+.pagination-item a:hover,
+.pagination-item a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+.pagination-item a:active {
+	color: #000000;
+}
+.pagination-item:nth-of-type(1) a {
+	color: #000000;
 }
 
 .back,
@@ -1560,6 +1665,10 @@ ul.breadcrumbs a:active {
 	font-weight: bold;
 	letter-spacing: 0.2em;
 	color: #000000;
+}
+
+.main-footer-monopods {
+	margin-top: 5px;
 }
 
 
@@ -1754,7 +1863,7 @@ ul.breadcrumbs a:active {
 	100%	{opacity: 1;}
 }
 
-.map-show {				/* Класс дл подгрузки из JavaScript */
+.map-show {				/* Класс для подгрузки из JavaScript */
 	display: block;
 	animation-name: appear;
 	animation-duration: 0.4s;
