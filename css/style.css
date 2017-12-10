@@ -134,7 +134,6 @@ header {
 	background-color: transparent;
 	border: transparent;
 	color: rgba(0, 0, 0, 0.3);
-	padding-top: -5px;
 	padding-left: 27px;
 }
 
@@ -434,7 +433,7 @@ header {
 	padding: 5px 50px 5px 45px;
 	background-image: url(../img/yellow_thin.png);
 	background-repeat: no-repeat;
-	background-position-y: center;
+	background-position: 0, center;
 	font-family: Gilroybold, Arial, serif;
 	font-weight: bold;
 	font-size: 18px;
@@ -757,7 +756,7 @@ header {
 .about-us p {
 	padding-right: 105px;
 	padding-bottom: 15px;
-	font-weight: 15px;
+	font-size: 15px;
 	letter-spacing: 0em;
 }
 
@@ -788,6 +787,10 @@ header {
 	opacity: 0.5;
 }
 
+.map-frame {
+	border: none;
+}
+
 .map-and-text {		/* Блок с контактами и картой */
 	padding-right: 5px;
 }
@@ -796,7 +799,7 @@ header {
 	padding-top: 22px;
 }
 
-.podrobnee-and-write-us {		/* Подписи "ПОДРОБНЕЕ О НАС" и "НПИШИТЕ НАМ" */
+.podrobnee-and-write-us {		/* Подписи "ПОДРОБНЕЕ О НАС" и "НАПИШИТЕ НАМ" */
 	width: 1165px;
 	margin: 20px auto 60px auto;
 	display: flex;
@@ -1228,7 +1231,7 @@ ul.breadcrumbs a:active {
 
 .sort span:not(:first-child) {             /*  Свойства видов сортировки  */
     padding-right: 20px;
-    font-weight: 14px;
+    font-size: 14px;
     letter-spacing: 0;
 }
 
