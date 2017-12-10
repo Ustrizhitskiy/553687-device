@@ -91,10 +91,19 @@ header {
 }
 
 .tophead {				/*Верхняя строка меню хедера  */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .site-search, 
 .site-search2 {  		/*Ширины флекс-контейнеров */
@@ -174,8 +183,12 @@ header {
 
 
 .site-search2 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .searh-site-login span {
 	letter-spacing: 0.02em;
@@ -232,8 +245,12 @@ header {
 }
 
 .cat-del-war-con {			
+	display: -webkit-box;			
+	display: -ms-flexbox;			
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .gilroy-font-header {			/* Задание свойств для второй строки меню хедера */
@@ -269,8 +286,12 @@ header {
 
 .left-services {			/* Доставка Гарантия Контакты */
 	width: 50%;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .delivery {
 	margin-left: 20px;}
@@ -284,12 +305,16 @@ header {
 	display: none;
 }
 .submenu:hover .types {			/* Проявляем выпадающий список */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	position: relative;			/* Чтобы перекрывал нижнюю картинку */
 	z-index: 5;
 }
 
 .types {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding-left: 60px;
 }
@@ -337,8 +362,12 @@ header {
 .slide-1,
 .slide-2,
 .slide-3 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .big-advirt-photo,
@@ -347,14 +376,21 @@ header {
 }
 
 .big-advirt-photo {			/* Блок с большой рекламной фотографией  */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	margin-right: 0px;
 }
 
 .short-white-line-null-one {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .short-white-line {
 	margin-top: 30px;
@@ -367,8 +403,12 @@ header {
 .big-advirt-photo {		/*  Размеры блока с фотографией  */
 	width: 550px;
 	height: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding-right: 0px;
 }
 
@@ -525,21 +565,31 @@ header {
 	margin-bottom: 150px;
 }
 .categories-icons {				/* Задаем тип блоков с иконками  */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .categories-icon-background {		/* Задаем цвет фон и размер блока с иконкой  */ 
 	background-color: rgba(240, 197, 46, 0.5);
 	width: 160px;
 	height: 160px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 
 .down {							/* Для второй иконки */
-	align-self: flex-end;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 
 .categories-icon-background:hover,
@@ -578,8 +628,12 @@ header {
 	height: 290px;
 	margin-left: auto;
 	margin-right: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .services {					/* Шрифт левой колонки раздела */
@@ -658,8 +712,11 @@ header {
 
 .delivery-warranty-credit-annotation {  /* Правая колонка с описанием */
 	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	margin-left: 115px;
 	margin-right: 68px;
 }
@@ -672,8 +729,12 @@ header {
 }
 
 .size-of-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-top: 35px;
 
 }
@@ -732,8 +793,11 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 84px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	padding-left: 3px;
 }
 
@@ -802,8 +866,12 @@ header {
 .podrobnee-and-write-us {		/* Подписи "ПОДРОБНЕЕ О НАС" и "НАПИШИТЕ НАМ" */
 	width: 1165px;
 	margin: 20px auto 60px auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	
 }
 .block-write-us {
@@ -855,19 +923,32 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 4px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	color: #ffffff;
 }
 
 .top-footer-nav {				/* Верхняя строка футера  */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .login-compare-cart {			/* Свойства верхней строки футера */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 28%;
 	margin: 0;
 }
@@ -951,8 +1032,12 @@ footer {
 
 .middle-footer-nav {			/* Вторая строка из трех блоков */
 	margin-top: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .our-adress,
@@ -962,6 +1047,8 @@ footer {
 
 .delivery-warranty-contacts {	/* Средний блок второй строки */
 	width: 450px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 	margin-right: 100px;
 	margin-top: 18px;
@@ -990,8 +1077,12 @@ footer {
 }
 
 .bottom-footer-nav {			/*Нижняя строка футера из трех блоков  */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-top: 30px;
 }
 
@@ -1008,8 +1099,12 @@ footer {
 }
 
 .social-networks {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-right: 52px;
 }
 
@@ -1091,8 +1186,12 @@ footer {
 }
 
 .site-search2 {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .cart-monopods::before {
@@ -1173,11 +1272,15 @@ ul.breadcrumbs a:active {
 
 .string {				/* целая строка */
 	margin-top: 42px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 68px;
 }
 
 .fiter-and-sort-title {		/* Содержимое строки */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -1187,25 +1290,37 @@ ul.breadcrumbs a:active {
 
 .left-string-top {				/* Левая часть строки, пустая,  без контента */
   background-color: #dcdcdc;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .right-string-top {				/* Правая часть строки, пустая, без контента */
   background-color: #ebebeb;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .fiter-and-sort-title {		/* Блок с контентом */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .filter-title {				/* Заголовок Фильтр */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
     width: 270px;
     height: 68px;
     background-color: #dcdcdc;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 60px;
 }
 .filter-span {
@@ -1213,12 +1328,18 @@ ul.breadcrumbs a:active {
 }
 
 .sort-title {				/* Заголовок Сортировка.... */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-left: 4px;
     width: 829px;
     height: 68px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .sort {
@@ -1294,11 +1415,15 @@ ul.breadcrumbs a:active {
 /************************** Основное содержимое страницы каталога *****************************/
 
 .container-filter-sort {				/* Все, что ниже строки Фильтр и Сортировка до подвала */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 1215px;
 }
 
 .left-and-right-content {		/* Содержимое всего контента */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -1308,19 +1433,27 @@ ul.breadcrumbs a:active {
 
 .left-string {				/* Левая часть строки, пустая,  без контента */
   background-color: #efefef;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .right-string {				/* Правая часть строки, пустая, без контента */
   background-color: #ffffff;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .left-and-right-content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .form-filter {				/* Левая колонка - фильтры */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
     width: 267px;
     background-color: #efefef;
@@ -1499,12 +1632,17 @@ ul.breadcrumbs a:active {
 }
 
 .catalog-list {			/* Блок фотографий */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-top: 36px;
 	margin-left: 0;
 	padding: 0;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .catalog-item {
@@ -1535,8 +1673,12 @@ ul.breadcrumbs a:active {
 }
 
 .annotation-and-price {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-top: 25px;
 	margin-bottom: 18px;
 }
@@ -1602,18 +1744,26 @@ ul.breadcrumbs a:active {
 }
 
 .pagination-list {				/* Строка пагинации */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 760px;
 	height: 70px;
 	margin-left: 72px;
 	margin-top: 23px;
 	background-color: #ebebeb;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 0 0px;
 }
 
 .pages-pagination {				/* Номера страниц в пагинации */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 0;
 	padding-left: 7px;
@@ -1622,9 +1772,14 @@ ul.breadcrumbs a:active {
 
 .back,
 .forward {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-	justify-content: space-around;
-	align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 129px;
 	height: 70px;
 	margin: 0;
@@ -1677,21 +1832,47 @@ ul.breadcrumbs a:active {
 
 /********************************** Форма обратной связи *************/
 
- @keyframes bounce {		/* Появление окна формы*/
+ @-webkit-keyframes bounce {		/* Появление окна формы*/
   0% {
-    transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
   }
 
   70% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
 
   90% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+ @keyframes bounce {		/* Появление окна формы*/
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -1704,7 +1885,11 @@ ul.breadcrumbs a:active {
 	height: 550px;
 	z-index: 10;
 	background-color: #ffffff;
-	box-shadow: 
+	-webkit-box-shadow: 
+		80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
+	        box-shadow: 
 		80px 0px 80px -80px rgba(0, 0, 0, 0.5),
 		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
 		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
@@ -1713,7 +1898,8 @@ ul.breadcrumbs a:active {
 
 .modal-show {				/* Класс для скрипта для появления модального окна */
 	display: block;
-	animation: bounce 0.6s;
+	-webkit-animation: bounce 0.6s;
+	        animation: bounce 0.6s;
 }
 
 .exit-write-us {		/* Кнопка закрытия окна */
@@ -1736,8 +1922,12 @@ ul.breadcrumbs a:active {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .your-name-sign {		/* Подписи к полям */
@@ -1767,7 +1957,8 @@ ul.breadcrumbs a:active {
 .box-input:focus {
 	background-color: transparent;
 	border: 2px solid #f7e296;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .write-us-your-message { 
@@ -1791,7 +1982,8 @@ ul.breadcrumbs a:active {
 	border: 2px solid #f7e296;
 	width: 710px;
 	height: 159px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .send-button {				/* Сама кнопка Отправить */
@@ -1852,10 +2044,22 @@ ul.breadcrumbs a:active {
 	left: 290px;
 	width:960px;
 	height: 559px;
-	box-shadow: 
+	-webkit-box-shadow: 
 		80px 0px 80px -80px rgba(0, 0, 0, 0.5),
 		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
 		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
+	        box-shadow: 
+		80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		-80px 0px 80px -80px rgba(0, 0, 0, 0.5),
+		0px 20px 45px -10px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes appear {		/* Появление окна с картой */
+	0%		{opacity: 0;}
+	30%		{opacity: 0,3;}
+	60%		{opacity: 0.6;}
+	80% 	{opacity: 0.8;}
+	100%	{opacity: 1;}
 }
 
 @keyframes appear {		/* Появление окна с картой */
@@ -1868,8 +2072,10 @@ ul.breadcrumbs a:active {
 
 .map-show {				/* Класс для подгрузки из JavaScript */
 	display: block;
-	animation-name: appear;
-	animation-duration: 0.4s;
+	-webkit-animation-name: appear;
+	        animation-name: appear;
+	-webkit-animation-duration: 0.4s;
+	        animation-duration: 0.4s;
 }
 
 .exit-google-map {
@@ -1907,6 +2113,8 @@ ul.breadcrumbs a:active {
 }
 
 .services-slide-show {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
