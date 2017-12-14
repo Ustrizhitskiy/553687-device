@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=1200, initial-scale=1">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext" rel="stylesheet">
@@ -10,8 +11,7 @@
   
   <body>
     <header class="main-header">
-      <div class="header-content">
-      
+      <div class="header-content">    
       <a href="index.html">
         <p class="header-logo-top">DEVICE</p>
       </a>
@@ -35,7 +35,7 @@
           </li>
           <li class="site-search2">
             <div class="searh-site-login">
-              <button>
+              <button type="button">
                 <span class="login-link-top">Войти</span>
               </button>       
             </div>
@@ -90,11 +90,17 @@
     <main class="main-container">
       <div class="slides-container">
         <h1 class="visually-hidden">Реклама большого монопода</h1>
-          <label for="slider-one"><span class="visually-hidden">Переключатель для первого слайда</span></label>
+          <label for="slider-one">
+            <span class="visually-hidden">Переключатель для первого слайда</span>
+          </label>
           <input class="slider-input slider-input-radio radio-left" type="radio" name="slider-group" value="first" id="slider-one" checked>
-          <label for="slider-second"><span class="visually-hidden">Переключатель для второго слайда</span></label>
+          <label for="slider-second">
+            <span class="visually-hidden">Переключатель для второго слайда</span>
+          </label>
           <input class="slider-input slider-input-radio radio-middle" type="radio" name="slider-group" value="second" id="slider-second">
-          <label for="slider-third"><span class="visually-hidden">Переключатель для третьего слайда</span></label>
+          <label for="slider-third">
+            <span class="visually-hidden">Переключатель для третьего слайда</span>
+          </label>
           <input class="slider-input slider-input-radio radio-right" type="radio" name="slider-group" value="third" id="slider-third">
       
         <article class="sliders">
@@ -110,8 +116,7 @@
                 <div class="short-white-line"></div>
                 <span class="null-one">01</span>
               </div>
-              <span class="font-ben-stiller top-ben-stiller">Делай селфи,</span>
-              <p class="font-ben-stiller second-ben-stiller">как Бен Стиллер!</p>
+              <p class="font-ben-stiller top-ben-stiller">Делай селфи,<br>как Бен Стиллер!</p>
               <p class="font-for-annotation annotation1">Самая длинная палка для селфи доступна в нашем магазине. Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a href="#">
                   <span class="slide-podrobnee">ПОДРОБНЕЕ</span>
@@ -136,7 +141,7 @@
           <section class="slides slide-2">
             <div class="big-advirt-photo">
               <h2 class="visually-hidden">Слайд с умными часами</h2>
-              <img src="img/big_clever-watch.png" width="345" height="485" alt="Фото умных часов">
+              <img src="img/big_clever_watch.png" width="345" height="485" alt="Фото умных часов">
             </div>
             <div class="ben-stiller">
               <div class="short-white-line-null-one">
@@ -205,7 +210,8 @@
               <div class="categories-icon-background">
                 <img class="categories-icon-image" src="img/svg/popular-1.svg" width="97" height="55" alt="Иконка виртуальной реальности">
               </div><br>
-              <span class="categories-icon-sign">Виртуальная реальность</span>
+              <span class="categories-icon-sign">Виртуальная</span>
+              <p class="second-line"> реальность</p>
             </a>
           </li>
           <li>
@@ -213,7 +219,8 @@
               <div class="categories-icon-background">
                 <img class="categories-icon-image down" src="img/svg/popular-2.svg" width="86" height="117" alt="Иконка палок для селфи">
               </div><br>
-              <span class="categories-icon-sign">Моноподы для селфи</span>
+              <span class="categories-icon-sign">Моноподы</span>
+              <p class="second-line">для селфи</p>
             </a>
           </li>
           <li>
@@ -258,13 +265,19 @@
             <h3 class="visually-hidden">Услуги</h3>         
             <ul class="services">
               <li>
-                <p class="service-button service-button-delivery default-checked"><span class="delivery-button">ДОСТАВКА</span></p>
+                <p class="service-button service-button-delivery default-checked">
+                  <span class="delivery-button">ДОСТАВКА</span>
+                </p>
               </li>
               <li>
-                <p class="service-button service-button-warranty"><span class="warranty-button">ГАРАНТИЯ</span></p>
+                <p class="service-button service-button-warranty">
+                  <span class="warranty-button">ГАРАНТИЯ</span>
+                </p>
               </li>
               <li>
-                <p class="service-button service-button-credit"><span class="credit-button">КРЕДИТ</span></p>
+                <p class="service-button service-button-credit"> 
+                  <span class="credit-button">КРЕДИТ</span>
+                </p>
               </li> 
             </ul>
           </section>
@@ -275,8 +288,7 @@
                 <p class="slide-header">Доставка</p>
                 <p class="font-for-annotation2">Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на Ваш этаж.</p>
               </div>
-              <div class="size-of-item">
-                <img class="delivery-image" src="img/svg/delivery.svg" width="136" height="164" alt="Бегущий человечек">
+              <div class="size-of-item running-man">
               </div>
             </div>
 
@@ -285,8 +297,7 @@
                 <p class="slide-header">Гарантия</p>
                 <p class="font-for-annotation2">Если из-за возгорания купленного у нас товара у Вас сгорит дом - не переживайте, мы выдадим Вам новый. Товар, не дом, конечно же.</p>
               </div>
-              <div class="size-of-item">
-                <img class="warranty-image" src="img/svg/warranty.svg" width="171" height="194" alt="Телефон и гаечный ключ">
+              <div class="size-of-item screwdriver">
               </div>
             </div>
 
@@ -295,8 +306,7 @@
                 <p class="slide-header">Кредит</p>
                 <p class="font-for-annotation2">Влезть в долговую яму стало проще! Кредитные констультанты подберут для Вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
               </div>
-              <div class="size-of-item">
-                <img class="credit-image" src="img/svg/credit.svg" width="156" height="186" alt="Человек тащит ящик">
+              <div class="size-of-item man-and-box">
               </div>
             </div>
           </aside>
@@ -305,16 +315,12 @@
       <div class="box-our-brands">  
         <ul class="our-brands">
           <li>
-            <img class="cancel_float brands-icon" src="img/item_dji.jpg" width="260" height="100" alt="Бренд DJI">
+          </li>
+          <li>         
+          </li>
+          <li>         
           </li>
           <li>
-            <img class="brands-icon" src="img/item_SP_gadgets.jpg" width="260" height="100" alt="Бренд SP-gadgets">
-          </li>
-          <li>
-            <img class="brands-icon" src="img/item_GoPro.jpg" width="260" height="100" alt="Бренд GoPro">
-          </li>
-          <li>
-            <img class="brands-icon" src="img/item_vive.jpg" width="260" height="100" alt="Бренд VIVE">
           </li>
         </ul>
       </div>
@@ -322,7 +328,7 @@
         <article class="about-us-and-contacts">
           <h2 class="visually-hidden">Транспортные компании и наш офис</h2>
           <section class="about-us">
-            <div class="short-black-line"></div> <!-- Короткая черная линия -->
+            <div class="short-black-line"></div>
             <h3 class="sign-about">О нас</h3>
             <p class="font-for-annotation">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
             </p>
@@ -335,22 +341,17 @@
             </ul>
           </section>
           <aside class="map-and-text">
-            <div class="short-black-line"></div> <!-- Короткая черная линия -->
+            <div class="short-black-line"></div>
             <h3 class="sign-about">Контакты</h3>
             <p class="font-for-annotation">Вы можете товар забрать сами, заехав в наш офис. Заодно, Вы сможете проверить работоспособность покупки. Всякое бывает.
             </p>
             <div class="google-map">
-              <div class="exit-google-map">
-                <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из Google-maps">
-              </div>
-
+              <button class="exit-button exit-google-map">
+              </button>
               <iframe class="map-frame" src="https://yandex.ru/map-widget/v1/-/CBaS6Lxh~A" width="960" height="559"></iframe>
-
             </div>
             <div class="map">
-              <a href="#">
-                <img class="href-big-foto" src="img/map_image.jpg" width="560" height="222" alt="Изображение карты">
-              </a>
+              <img class="href-big-foto" src="img/map_image.jpg" width="560" height="222" alt="Изображение карты">
             </div>
   
           </aside>
@@ -393,11 +394,23 @@
         <div class="middle-footer-nav">
           <p class="our-adress">г. Москва, ул. Строителей, 15</p>
           <ul class="delivery-warranty-contacts">
-            <li class="delivery-footer"><a href="delivery.html"><span>ДОСТАВКА</span></a></li>
-            <li class="warranty-footer"><a href="warranty.html"><span>ГАРАНТИЯ</span></a></li>
-            <li><a href="contacts.html"><span>КОНТАКТЫ</span></a></li>
+            <li class="delivery-footer">
+              <a href="delivery.html">
+                <span>ДОСТАВКА</span>
+              </a>
+            </li>
+            <li class="warranty-footer">
+              <a href="warranty.html">
+                <span>ГАРАНТИЯ</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacts.html">
+                <span>КОНТАКТЫ</span>
+              </a>
+            </li>
           </ul>
-          <p class="our_number">Тел: +7(495)495-95-95</p>
+          <p>Тел: +7(495)495-95-95</p>
         </div>
 
         <div class="bottom-footer-nav">
@@ -406,17 +419,17 @@
           <ul class="social-networks">
             <li class="social-button">
               <a href="https://www.facebook.com">
-                 <img src="img/svg/fb.svg" width="32" height="32" alt="Ссылка на нашу страничку в Фейсбук">
+                <div class="facebook"></div>     
               </a>
             </li>
             <li class="social-button">
               <a href="#">
-                <img src="img/svg/instagram.svg" width="32" height="32" alt="Ссылка на нашу страничку в Инстаграмм">
+                <div class="instagramm"></div>
               </a>
             </li>
             <li class="social-button">
               <a href="#">
-                <img src="img/svg/twitter.svg" width="32" height="32" alt="Ссылка на нашу страничку в Твиттер">
+                <div class="twitter"></div>
               </a>
             </li>
           </ul>
@@ -430,9 +443,8 @@
 
 <!--             Форма обратной связи            -->
     <div class="form-write-us"> 
-        <div class="exit-write-us">
-          <img src="img/svg/modal-close.svg" width="55" height="55" alt="Выход из окна Напишите нам">
-        </div>
+      <button class="exit-button exit-write-us">
+      </button>
       <form action="#" method="post">
         <div class="name-and-email">
           <div class="write-us-your-name">
@@ -455,7 +467,7 @@
           </label>
           <textarea class="input-your-message" id="your-message" name="your-message" rows="5" cols="50"></textarea>
         </div>
-        <button class="send-button">
+        <button class="send-button" type="submit">
           <span class="send">ОТПРАВИТЬ</span>
         </button>
       </form>    

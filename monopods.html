@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=1200, initial-scale=1">
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
@@ -93,10 +94,18 @@
     <h1 class="monopods-for-selfy">Моноподы для селфи</h1>
     
     <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
-      <li><img src="img/svg/nav-arrow.svg" width="4" height="7" alt="Стрелочка хлебных крошек"></li>
-      <li><a href="catalog.html">Каталог товаров</a></li>
-      <li><img src="img/svg/nav-arrow.svg" width="4" height="7" alt="Стрелочка хлебных крошек"></li>
+      <li>
+        <a href="index.html">Главная</a>
+      </li>
+      <li>
+        <span class="nav-arrow"></span>
+      </li>
+      <li>
+        <a href="catalog.html">Каталог товаров</a>
+      </li>
+      <li>
+        <span class="nav-arrow"></span>
+      </li>
       <li class="breadcrumbs-current">Моноподы для селфи</li>
     </ul>
 
@@ -117,11 +126,9 @@
                 <span class="sort-by-popul">По популярности</span>
               </div>
               <div class="sort-up-down">
-                <a class="arrow-up" href="#">
-                  <img src="img/svg/icon-up-dir.svg" width="11" height="10" alt="Стрелочка сортировки по-возрастанию">
+                <a class="arrow-up" href="#">                
                 </a>
                 <a class="arrow-down" href="#">
-                  <img src="img/svg/icon-down-dir.svg" width="11" height="10" alt="Стрелочка сортировки по убыванию">
                 </a>
               </div>
             </div>
@@ -156,7 +163,6 @@
                     </div>
                   </div>
                 </fieldset>
-
                 <fieldset>
                   <legend>Цвет</legend>
                   <div class="black-border"></div>
@@ -199,8 +205,6 @@
                     </li>
                   </ul>
                 </fieldset>
-
-
                 <fieldset>
                   <legend>Bluetooth</legend>
                   <div class="black-border"></div>
@@ -222,7 +226,7 @@
                     </li>
                   </ul>
                 </fieldset>
-                <button class="send-button show-button">
+                <button class="send-button show-button" type="submit">
                   <span class="send">ПОКАЗАТЬ</span>
                 </button>
               </form>
@@ -232,105 +236,134 @@
               <div class="images">
                 <ul class="catalog-list">
                   <li class="catalog-item">
-                    <div class="container-for-item-hover">
-                      <div class="add-to-cart-and-compare">
-                        <button class="send-button show-button button-hover">
-                          <span class="send add-hover">В КОРЗИНУ</span>
-                        </button>
-                        <button class="button-add-to-compare">
-                          <span class="sign-add-to-compare">Добавить к сравнению</span>
-                        </button>
-                      </div>
-                    </div>
-                      <a href="catalog-item.html">
+                    <div class="container-for-item-1">
+                      <div class="container-for-item-in">
                         <div class="new-marked">
-                          <img src="img/shape.png" width="60" height="60" alt="Метка NEW">
                           <span class="new-sign">NEW</span>
                         </div>
-                        <img src="img/item_1.jpg" width="360" height="380" alt="Любительская селфи-палка"><br>
-                        <div class="annotation-and-price">
-                          <span class="catalog-item-title">Любительская селфи-палка</span>
-                          <span class="catalog-item-price">500 руб.</span>
+                        <div class="add-to-cart-and-compare">
+                          <button type="button" class="add-to-cart">
+                            <span class="send add-hover">В КОРЗИНУ</span>
+                          </button>
+                          <button type="button" class="button-add-to-compare">
+                            <span class="sign-add-to-compare">Добавить к сравнению</span>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="annotation-and-price" href="catalog-item.html">
+                        <span class="catalog-item-title">Любительская селфи-палка</span>
+                        <span class="catalog-item-price">500 руб.</span>
                       </a>
+                    </div>           
                   </li>
                   <li class="catalog-item">
-                    <div class="container-for-item-hover">
-                      <div class="add-to-cart-and-compare">
-                        <button class="send-button show-button button-hover">
-                          <span class="send add-hover">В КОРЗИНУ</span>
-                        </button>
-                        <button class="button-add-to-compare">
-                          <span class="sign-add-to-compare">Добавить к сравнению</span>
-                        </button>
-                      </div>
-                    </div>
-                      <a href="catalog-item.html">
+                    <div class="container-for-item-2">
+                      <div class="container-for-item-in">
                         <div class="new-marked">
-                          <img src="img/shape.png" width="60" height="60" alt="Метка NEW">
                           <span class="new-sign">NEW</span>
                         </div>
-                        <img src="img/item_2.jpg" width="360" height="380" alt="Профессиональная селфи-палка"><br>
-                        <div class="annotation-and-price">
-                          <span class="catalog-item-title">Профессиональная селфи-палка</span>
-                          <span class="catalog-item-price">1 500 руб.</span>
+                        <div class="add-to-cart-and-compare">
+                          <button type="button" class="add-to-cart">
+                            <span class="send add-hover">В КОРЗИНУ</span>
+                          </button>
+                          <button type="button" class="button-add-to-compare">
+                            <span class="sign-add-to-compare">Добавить к сравнению</span>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="annotation-and-price" href="catalog-item.html">
+                        <span class="catalog-item-title">Профессиональная селфи-палка</span>
+                        <span class="catalog-item-price">1 500 руб.</span>
                       </a>
+                    </div>         
                   </li>
                   <li class="catalog-item">
-                    <div class="container-for-item-hover">
-                      <div class="add-to-cart-and-compare">
-                        <button class="send-button show-button button-hover">
-                          <span class="send add-hover">В КОРЗИНУ</span>
-                        </button>
-                        <button class="button-add-to-compare">
-                          <span class="sign-add-to-compare">Добавить к сравнению</span>
-                        </button>
-                      </div>
-                    </div>
-                      <a href="catalog-item.html">
+                    <div class="container-for-item-3">
+                      <div class="container-for-item-in">
                         <div class="new-marked">
-                          <img src="img/shape.png" width="60" height="60" alt="Метка NEW">
                           <span class="new-sign">NEW</span>
                         </div>
-                        <img src="img/item_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка"><br>
-                        <div class="annotation-and-price">
-                          <span class="catalog-item-title">Непотопляемая селфи-палка</span>
-                          <span class="catalog-item-price">2 500 руб.</span>
+                        <div class="add-to-cart-and-compare">
+                          <button type="button" class="add-to-cart">
+                            <span class="send add-hover">В КОРЗИНУ</span>
+                          </button>
+                          <button type="button" class="button-add-to-compare">
+                            <span class="sign-add-to-compare">Добавить к сравнению</span>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="annotation-and-price" href="catalog-item.html">
+                        <span class="catalog-item-title">Непотопляемая селфи-палка</span>
+                        <span class="catalog-item-price">2 500 руб.</span>
                       </a>
+                    </div>
                   </li>
                   <li class="catalog-item">
-                    <div class="container-for-item-hover">
-                      <div class="add-to-cart-and-compare">
-                        <button class="send-button show-button button-hover">
-                          <span class="send add-hover">В КОРЗИНУ</span>
-                        </button>
-                        <button class="button-add-to-compare">
-                          <span class="sign-add-to-compare">Добавить к сравнению</span>
-                        </button>
-                      </div>
-                    </div>
-                      <a href="catalog-item.html">
+                    <div class="container-for-item-4">
+                      <div class="container-for-item-in">
                         <div class="new-marked">
-                          <img src="img/shape.png" width="60" height="60" alt="Метка NEW">
                           <span class="new-sign">NEW</span>
                         </div>
-                        <img src="img/item_4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной"><br>
-                        <div class="annotation-and-price">
-                          <span class="catalog-item-title">Селфи-палка "Следуй за мной"</span>
-                          <span class="catalog-item-price">4 900 руб.</span>
+                        <div class="add-to-cart-and-compare">
+                          <button type="button" class="add-to-cart">
+                            <span class="send add-hover">В КОРЗИНУ</span>
+                          </button>
+                          <button type="button" class="button-add-to-compare">
+                            <span class="sign-add-to-compare">Добавить к сравнению</span>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="annotation-and-price" href="catalog-item.html">
+                        <span class="catalog-item-title">Селфи-палка "Следуй за мной"</span>
+                        <span class="catalog-item-price">4 900 руб.</span>
                       </a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="container-for-item-4">
+                      <div class="container-for-item-in">
+                        <div class="new-marked">
+                          <span class="new-sign">NEW</span>
+                        </div>
+                        <div class="add-to-cart-and-compare">
+                          <button type="button" class="add-to-cart">
+                            <span class="send add-hover">В КОРЗИНУ</span>
+                          </button>
+                          <button type="button" class="button-add-to-compare">
+                            <span class="sign-add-to-compare">Добавить к сравнению</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a class="annotation-and-price" href="catalog-item.html">
+                        <span class="catalog-item-title">Селфи-палка "Следуй за мной"</span>
+                        <span class="catalog-item-price">4 900 руб.</span>
+                      </a>
+                    </div>
                   </li>
                 </ul>
               </div>
               <div class="pagination-list">
                   <a class="back" href="#">НАЗАД</a>
                   <ul class="pages-pagination">
-                    <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-                    <li class="pagination-item"><a href="#">2</a></li>
-                    <li class="pagination-item"><a href="#">3</a></li>
+                    <li class="pagination-item pagination-item-current">
+                      <a href="#">1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a href="#">3</a>
+                    </li>
                   </ul>
                   <a class="forward" href="#">ВПЕРЕД</a>
               </div>
@@ -370,11 +403,23 @@
         <div class="middle-footer-nav">
           <p class="our-adress">г. Москва, ул. Строителей, 15</p>
           <ul class="delivery-warranty-contacts">
-            <li class="delivery-footer"><a href="delivery.html"><span>ДОСТАВКА</span></a></li>
-            <li class="warranty-footer"><a href="warranty.html"><span>ГАРАНТИЯ</span></a></li>
-            <li><a href="contacts.html"><span>КОНТАКТЫ</span></a></li>
+            <li class="delivery-footer">
+              <a href="delivery.html">
+                <span>ДОСТАВКА</span>
+              </a>
+            </li>
+            <li class="warranty-footer">
+              <a href="warranty.html">
+                <span>ГАРАНТИЯ</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacts.html">
+                <span>КОНТАКТЫ</span>
+              </a>
+            </li>
           </ul>
-          <p class="our_number">Тел: +7(495)495-95-95</p>
+          <p>Тел: +7(495)495-95-95</p>
         </div>
 
         <div class="bottom-footer-nav">
